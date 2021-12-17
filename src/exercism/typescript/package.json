@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "0.0.1",
+  "description": "My Exercism TypeScript notes and solutions",
+  "main": "''",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "typescript",
+    "challenge",
+    "solution",
+    "example"
+  ],
+  "author": "Fernando Basso <fernandobasso.br@gmail.com>",
+  "license": "ISC"
+}

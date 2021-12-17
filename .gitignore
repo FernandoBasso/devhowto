@@ -1,0 +1,25 @@
+#
+# .gitignore
+#
+
+##
+# Why didn't node do like Python or Ruby that installs dependencies in a
+# global location instead of having a zillion copy of everything in each
+# project‽
+#
+node_modules
+
+##
+# For now at least, let's not commit the .md files that come with
+# Exercism's exercise challenges.
+#
+src/exercism/typescript/**/*.md
+
+##
+# Xournal++ backup files.
+#
+*.xopp~
+
+#
+# vim: set textwidth=72:
+#

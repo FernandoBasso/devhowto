@@ -1,0 +1,60 @@
+site_name: Dev How To
+
+nav:
+  - Home: index.md
+  - Command Line:
+    - tar: command-line/tar.md
+    - unzip: command-line/unzip.md
+    - grep: command-line/grep.md
+    - Useful SSH Commands: command-line/ssh-useful-commands.md
+    - Git:
+      - Git Add: command-line/git/git-add.md
+  - Text Editors:
+    - Vim:
+      - Vim Useful Tips: text-editors/vim/useful-tips.md
+      - Vim Gotchas: text-editors/vim/gotchas.md
+  - Exercism:
+    - Intro: exercism/index.md
+    - TypeScript:
+      - Two-Fer: exercism/typescript/two-fer.md
+      - Resistor Color Duo: exercism/typescript/resistor-color-duo.md
+      - Resistor Color Trio: exercism/typescript/resistor-color-trio.md
+  - TypeScript:
+    - Ted Navard Advanced TypeScript (video notes):
+      - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
+      - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
+      - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
+      - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
+
+theme:
+  name: material
+  palette:
+    accent: indigo
+  custom_dir: overrides
+  features:
+    # - toc.integrate
+    - content.code.annotate
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+
+markdown_extensions:
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  - toc:
+      permalink: '#'
+      baselevel: 1
+      separator: '-'
+  - admonition
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://gitlab.com/fernandobasso

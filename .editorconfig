@@ -1,0 +1,28 @@
+root = true
+
+[*]
+# indent_style = space
+# indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{bash,sh}]
+indent_style = tab
+indent_size = 2
+
+[*.{c,hs,rb,js,ts,java,css,html}]
+indent_style = space
+indent_size = 2
+
+##
+# I use both vim and emacs. Love both. For .rst files I have mostly
+# been using emacs and I'm not sure we should attempt to set anything
+# for .rst files in .editorconfig. Emacs and rst-mode mode works
+# amazingly well without any extra configuration. OK if we need to
+# actually add some .rst config here at some point, though.
+##

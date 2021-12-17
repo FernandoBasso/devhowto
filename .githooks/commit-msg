@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+#
+# NOTE: See Commit Types in CONTRIBUTING.md.
+#
+
+##
+# Valid commit types for this repository.
+#
+# Update manually when a new type needs to be added.
+#
+commit_types=(
+  chicken-scheme
+  chore
+  cmdline
+  codewars
+  compfpjs
+  conf
+  deno
+  docs
+  emacs
+  exercism
+  fix
+  git
+  haskell
+  htdp
+  kitty
+  macos
+  magfp
+  style
+  tnadv
+  vim
+)
+
+##
+# The commit-msg hook passes the commit message file as the first
+# parameter to the script.
+#
+commit_editmsg_file="$1"
+
+##
+# We want to validate the commit subject (title, headline),
+# not the body.
+#
+subject="$(sed --silent 1p < "$commit_editmsg_file")"
+
+##
+# Exit with SUCCESS status as soon as we find a first matching type.
+#
+for t in "${commit_types[@]}"
+do
+  if printf %s "$subject" | grep --silent "^${t}: "
+  then
+    exit 0
+  fi
+done
+
+#
+# If we reach this point in the script, it means no types matched inside
+# the loop. We inform the user and exit with status 1 to indicate
+# failure so the commit is not performed.
+#
+
+cat <<\EOF
+Your commit message does not contain a valid commit type.
+
+Valid types:
+
+EOF
+
+printf '  • %s\n' "${commit_types[@]}"
+
+exit 1
+
+#
+# vim: set tw=72:
+#
