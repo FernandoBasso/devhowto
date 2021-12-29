@@ -156,6 +156,10 @@ because of closures in ECMAScript, that parameter is available in the returned
 decorator function. Every time a decorator needs parameters, a decorator
 factory will be used.
 
+Class decorators run only once when the class is defined (when parsing the
+source code). Method decorators run every time a method is invoked (as do
+accessor decorators).
+
 !!! info
 
     Class instance methods are attached to the prototype of the object and are
@@ -176,3 +180,36 @@ factory will be used.
     - [MDN getOwnPropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
     - [MDN defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
+
+## Accessor Decorators
+
+* Applied to the Property Descriptor for the accessor;
+* Can be used to observe, modify, or replace an accessor definition;
+* Called as a function at runtime, with three arguments:
+    * Either the constructor of class for a static member, or the prototype
+      of the class for an instance member;
+    * Member name;
+    * Member Property Descriptor;
+* If a value is returns it will be used as the Property Descriptor for the
+  member.
+
+```ts title="method decorator example"
+--8<-- "src/typescript/ted-neward-advanced-typescript/e09-accessor-decorator.ts"
+```
+
+1. We replace the accessor with our own function, which logs (traces) and then
+   calls the original getter with `getter.call(this)`. Arrow functions would
+   not work here because we need the correct value of `this`.
+
+The accessor is the *getter* or *setter* that go along with the field. They
+are known as *accessor properties*.
+
+> This is Aspect Oriented Programming at its finest.
+> 
+> — Ted Neward
+
+Every time we access `x` or `y`, the `trace` decorator, because it is an
+accessor decorator, will be fired (contrary to class decorators that run only
+once when the class is defined).
+
+What we did here is what the AOP people referred to as *wrappers*.

@@ -1,19 +1,17 @@
-import { log } from './utils';
-
 type MethodDecoratorFn = (
   target: unknown,
   name: string,
-  descr: PropertyDescriptor,
+  descr: PropertyDescriptor
 ) => void;
 
 function enumerable(isEnumerable: boolean): MethodDecoratorFn {
-  return function enumerableDecorator (
+  return function enumerableDecorator(
     target: unknown,
     name: string,
-    descr: PropertyDescriptor,
+    descr: PropertyDescriptor
   ) {
     descr.enumerable = isEnumerable;
-  }
+  };
 }
 
 export class Greeter {
