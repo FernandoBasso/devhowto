@@ -249,3 +249,24 @@ Order of evaluation is not important until it becomes important in a given
 situation 🤣️. Check
 [Decorator Evaluation](https://www.typescriptlang.org/docs/handbook/decorators.html#decorator-evaluation)
 
+## Decorator Composition
+
+1.  Multiple decorators on a given declaration compose (a chain of calls that
+    resolve all at once);
+2.  Very specific order;
+    1. Expressions for each decorator are evaluated to-to-bottom;
+    2. Results are then called as functions from top-top-bottom;
+3.  Very similar to function composition in functional languages;
+
+```ts title="decorator composition example"
+--8<-- "src/typescript/ted-neward-advanced-typescript/e11-decorator-composition.ts"
+```
+
+This is the classic "f of g" function composition scenario. But with decorators
+🚀️.
+
+More often than not decorators should be written so that the order of evaluation should not matter — just work with what you've got and don't make
+any assumptions about anything that is going on around you — but sometimes
+decorators may want to work together to create some higher order functionality
+and knowing that they will compose is important, order may matter and some
+assumptions about the outside world may be unavoidable.
