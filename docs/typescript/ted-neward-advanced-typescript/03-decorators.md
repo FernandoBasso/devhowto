@@ -213,3 +213,39 @@ accessor decorator, will be fired (contrary to class decorators that run only
 once when the class is defined).
 
 What we did here is what the AOP people referred to as *wrappers*.
+
+## Property Decorators
+
+1. Declared just before a property declaration;
+2. Call as a function at run time, with the following two arguments:
+y
+3. Due to limitations in ES Spec and TS, a property decorator can only be used
+   to observe that a property of a specific name has been declared for a class.
+
+```ts title="property decorator example"
+--8<-- "/home/fernando/work/src/devhowto/src/typescript/ted-neward-advanced-typescript/e10-property-decorator.ts"
+```
+
+The property decorator is run only once when the property is defined (the source
+is parsed). It behaves like a class decorator in this regard (contrary to
+method and accessor decorators that fire every time a method or accessor
+is executed).
+
+## Parameter Decorators
+
+1. Declared just before a parameter declaration;
+2. Applied to the function for a class constructor or method declaration;
+3. Called as a function at run time, with the following three arguments:
+    1. Either the constructor of class for a static member, or the prototype
+      of the class for an instance member;
+    2. Member name;
+    3. Ordinal index of the parameter in the function's parameter list;
+4. Can only be used to observed that a parameter has been declared on a method;
+5. Return value of the parameter decorator is ignored.
+
+## Order of Evaluation
+
+Order of evaluation is not important until it becomes important in a given
+situation 🤣️. Check
+[Decorator Evaluation](https://www.typescriptlang.org/docs/handbook/decorators.html#decorator-evaluation)
+
