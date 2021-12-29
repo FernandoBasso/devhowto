@@ -11,6 +11,8 @@
     (like [Angular](https://angular.io/api/core#decorators))
     have been using them for a long time.
 
+## Intro
+
 Decorators allows defining metadata and acting on it. They are a special kind
 of declaration that can be attached to a class, declaration, method, accessor,
 property, or parameter.
@@ -126,4 +128,51 @@ definition tucked away somewhere and had back proxies
    mess with our implementation! We rule this class with an iron hand.
 
 If we remove the `sealed` decorator, things work fine.
+
+!!! info
+
+    Using this is a way of making the class “final”, or as the Java spec calls
+    it, “effectively final”.
+
+## Method Decorators
+
+* Applied to the Property Descriptor for the method;
+* Can be used to observe, modify, or replace a method definition;
+* Called as a function at runtime, with three arguments:
+    * Either the constructor of class for a static member, or the prototype
+      of the class for an instance member;
+    * Member name;
+    * Member Property Descriptor;
+* If a value is returns it will be used as the Property Descriptor for the
+  method.
+
+```ts title="method decorator example"
+--8<-- "src/typescript/ted-neward-advanced-typescript/e08-method-decorator.ts"
+```
+
+The example above uses a *decorator factory*, which is simply a function that
+returns a decorator functions. The decorator factory takes a parameter, and
+because of closures in ECMAScript, that parameter is available in the returned
+decorator function. Every time a decorator needs parameters, a decorator
+factory will be used.
+
+!!! info
+
+    Class instance methods are attached to the prototype of the object and are
+    not enumerable. `Object.keys` will not retrieve a class's instance method,
+    and `Object.getOwnPropertyNames` or `Object.getOwnPropertySymbols` will
+    retrieve the method properties even if they are non-enumerable. Not sure
+    about the use of the decorator `@enumerable(false)` in the `greet` method
+    or how to make it not show up.
+
+    The `PropertyDescriptor` is a formal object described in the ECMAScript
+    spec that describes a property of an object.
+
+    These are all related topics:
+
+    - [Enumerability and Ownership at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+    - [Enumerability of Properties in the Exploring JS book](https://exploringjs.com/deep-js/ch_enumerability.html)
+    - [PropertyDescriptor](https://tc39.es/ecma262/#sec-property-descriptor-specification-type)
+    - [MDN getOwnPropertyDescriptor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)
+    - [MDN defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
