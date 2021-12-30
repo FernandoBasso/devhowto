@@ -26,6 +26,7 @@ nav:
       - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
       - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
       - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
+      - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
 
 theme:
   name: material
