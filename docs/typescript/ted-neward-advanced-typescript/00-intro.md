@@ -8,6 +8,10 @@ made a little more realistic since I'm transcribing them from the talk
 slides to the webpages, which makes it more appropriate to have
 lengthier code with extra explanations or annotations.
 
+## Some Interesting Comments From Ted Neward
+
+> TypeScript has so many interesting that are just not present in any other
+> language that I've seen in the traditional static, object-oriented space.
 
 ## Strict TypeScript Settings
 
@@ -77,7 +81,7 @@ In the video:
     * [25:58](https://youtu.be/wD5WGkOEJRs?t=1558) Order of Evaluation
     * [27:03](https://youtu.be/wD5WGkOEJRs?t=1623) Decorator Factories
     * [27:12](https://youtu.be/wD5WGkOEJRs?t=1632) Decorator Composition
-* [28:32](https://youtu.be/wD5WGkOEJRs?t=1712) Symbols
+* [29:18](https://youtu.be/wD5WGkOEJRs?t=1758) Symbols
     * [31:28](https://youtu.be/wD5WGkOEJRs?t=1888) Usage
 * [32:06](https://youtu.be/wD5WGkOEJRs?t=1926) Iterators
     * [32:10](https://youtu.be/wD5WGkOEJRs?t=1930) Iterable Objects

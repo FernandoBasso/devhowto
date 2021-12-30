@@ -25,6 +25,7 @@ nav:
       - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
       - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
       - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
+      - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
 
 theme:
   name: material
