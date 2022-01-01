@@ -28,6 +28,7 @@ nav:
       - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
       - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
       - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
+      - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
 
 theme:
   name: material
