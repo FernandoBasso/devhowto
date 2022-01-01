@@ -109,3 +109,73 @@ defaults for type constraints.
 
 
 ## Conditional Types
+
+- We can defer type parameter decisions until later based on conditions;
+- `extends` in this case serves as something of a conditional point;
+- Syntax looks basically like the conditional (`? :`) operator (a.k.a. *ternary
+  operator*)
+
+```ts title="conditional type example"
+--8<-- "src/typescript/ted-neward-advanced-typescript/e19-conditional-types.ts"
+```
+
+Has has been found out about 15 years ago (as of 2022) that C++ templates are
+turing-complete. Ted is 99% sure that TypeScript templates are also
+turing-complete. You could write your entire program entirely in terms of
+generics. Compile and now you don't even have to run it because compiler has
+already done all the work for you.
+
+A lot of that thought is what went into the
+[C++ boost library](https://www.boost.org/)
+, which is how C++ is able to do a number of things that Java and C# can do,
+but C++ can do it without a virtual machine 😲, because it can figure out a
+number at these things at compile time rather than at runtime.
+
+It is more or less what our `TypeName` type is doing. `extends` in this
+particular case is basically our conditional. We can think of it as the
+equality operator here, “if `T` extends string, then the returned type is
+the literal "string"”. Same with the others.
+
+Conditional types open an entire world of possibilities. I can say “this type
+will be either a type A or a type B depending upon whether type A has a
+particular property.” We can combine this with type constraints, so we can
+say things like “either type A has to have this `length` property or the actual
+type is a type B which is a proxy around type A that provides the `length`
+property and does nothing.”
+
+And that is the start of the box creaking open because you start getting into
+mind-blowing techniques and possibilities.
+
+NOTE: At this point Ted goes into typing currying and composition with an
+example from a post from FreeCodeCamp. Watch
+[this part at 1:00:17 in the video](https://youtu.be/wD5WGkOEJRs?t=3617).
+Very bluntly this is the opening of a Pandora's box. There is a tremendous
+amount of power and turing-completeness that we can wrestle with in the
+TypeScrpt space.
+
+The aforementioned FreeCodeCamp post,
+[How to master advanced TypeScript patterns — Learn how to create types for curry and Ramda](https://www.freecodecamp.org/news/typescript-curry-ramda-types-f747e99744ab/),
+goes into how to build currying to replace the untyped versions of currying
+that we see in
+[Ramda](https://ramdajs.com/).
+
+Ted emphasizes it is a very well-written tutorial stepping you through step
+by step in terms of how all of these things will combine in order to allow us
+to curry. It is an extremely good way to come up to speed on some features
+that TypeScript has making use of these conditional typing capabilities.
+
+## Conclusion
+
+Ted finishes saying he would hope the TypeScript team would take some time to
+update the spec and the docs (make them complete). He said he created PDFs out
+of the 1.8 spec, the handbook and the release notes, and it came about to about
+470 pages 😲.
+
+> This is NOT a trivial language.
+> 
+> And please, don't think that TypeScript is just JavaScript with a little
+> typing thrown in.
+>
+> These guys are thinking a much, much longer more strategic game, and there is
+> a lot more waiting in the wings. We are not done here by any stretch of the
+> imagination.

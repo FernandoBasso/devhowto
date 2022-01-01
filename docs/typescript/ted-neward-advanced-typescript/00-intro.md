@@ -10,8 +10,21 @@ lengthier code with extra explanations or annotations.
 
 ## Some Interesting Comments From Ted Neward
 
+TypeScript brings in new ideas (not just a copy of Java, C# or C++):
+
 > TypeScript has so many interesting that are just not present in any other
 > language that I've seen in the traditional static, object-oriented space.
+
+TypeScript is not a trivial language (it is not Flow or React prop-types):
+
+> This is NOT a trivial language.
+> 
+> And please, don't think that TypeScript is just JavaScript with a little
+> typing thrown in.
+>
+> These guys are thinking a much, much longer more strategic game, and there is
+> a lot more waiting in the wings. We are not done here by any stretch of the
+> imagination.
 
 ## Strict TypeScript Settings
 
