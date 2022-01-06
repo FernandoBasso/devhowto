@@ -3,6 +3,7 @@ site_name: Dev How To
 nav:
   - Home: index.md
   - Command Line:
+    - Shell Redirection: command-line/shell-redirection.md
     - tar: command-line/tar.md
     - unzip: command-line/unzip.md
     - grep: command-line/grep.md
