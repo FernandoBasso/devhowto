@@ -30,6 +30,9 @@ nav:
       - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
       - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
       - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
+  - Functional Programming:
+    - PureScript:
+      - Functions: purescript/functions.md
 
 theme:
   name: material

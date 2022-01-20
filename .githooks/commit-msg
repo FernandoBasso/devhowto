@@ -27,6 +27,7 @@ commit_types=(
   kitty
   macos
   magfp
+  purescript
   style
   tnadv
   vim
