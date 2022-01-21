@@ -32,6 +32,7 @@ nav:
       - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
   - Functional Programming:
     - PureScript:
+      - Intro: purescript/intro.md
       - Functions: purescript/functions.md
 
 theme:
