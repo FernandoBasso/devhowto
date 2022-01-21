@@ -2,10 +2,6 @@
 
 
 
-Yes! Try!
-
-
-
 ## PureScript Resources
 
 - [PureScript website](https://www.purescript.org/) – contains links to the documentation repository, the Pursuit package database, etc.
@@ -13,3 +9,4 @@ Yes! Try!
 - [PureScript by Example](https://book.purescript.org) – community fork, free online.
 - [PereScript Jordan’s Reference](https://jordanmartinez.github.io/purescript-jordans-reference-site/) – free online.
 
+- [Real World Halogen](https://github.com/thomashoneyman/purescript-halogen-realworld) – reference project.
