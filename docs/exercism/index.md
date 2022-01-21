@@ -48,7 +48,7 @@ $ exercism configure \
 
 1. You may need to hit `Ctrl+d` to run/finish the `cat` command.
 
-!!! tip "~/.bash_profile, ~/bashrc adn login shells"
+!!! tip "~/.bash_profile, ~/bashrc and login shells"
 
     Make sure your terminal is configured to run as a login shell
     otherwise `~/.bash_profile` is not read by default. As an

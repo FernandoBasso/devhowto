@@ -1,4 +1,4 @@
-# PureScript Functions
+# PureScript Function
 
 Import `Prelude` and other stuff to play around with these examples in the REPL.
 
@@ -11,7 +11,7 @@ Import `Prelude` and other stuff to play around with these examples in the REPL.
     Some of these functions have non-meaningful names on purpose. The idea is that we know what a function does by careful scrutiny of the signature and implementation as a way to force ourselves to read and understand each bit.
 
 
-## Lambda Expressions
+## Lambda Expression
 
 Applying a lambda expression right then and there:
 
@@ -23,14 +23,13 @@ Applying a lambda expression right then and there:
 0
 ```
 
-Saving lambda expression to a variable:
+Assigning a lambda expression to a variable:
 
 ```purescript
 > f = (\n -> mod n 2)
 > f 3
 1
 ```
-
 
 
 ```
@@ -50,9 +49,9 @@ f1 = eq 0 <<< (_ `mod` 2)
 Verifying if a number is even:
 
 ```
-## Aliasing functions to infix symbols
+## Aliasing functions to infix symbol
 
-> f1 n = eq 0 (mod n 2) 
+> f1 n = eq 0 (mod n 2)
 > f2 n = eq (mod n 2) 0
 
 > f1 4
@@ -68,8 +67,7 @@ In `f1` we `eq` compare `0` with the application `(mod n 2)`. In `f2` we `eq` co
 
 
 
-## Aliasing functions to infix symbols
-
+## Aliasing functions to infix symbol
 
 
 Making an alias to `mod`:
@@ -83,5 +81,50 @@ f2 = eq 0 <<< (_ % 2)
 
 f3 :: Int -> Boolean
 f3 = (_ % 2) >>> eq 0
+```
+
+
+## Currying and Partial Application
+
+Let’s define a function that “takes two arguments”:
+
+```purescript
+f :: Int -> Int -> Int
+f x y = (+) x y
+```
+
+In fact, it does NOT take two arguments. It takes one argument, and returns a function that takes the other argument, which then returns the final, sum result.
+
+Partially apply `myAdd`, that is, pass one argument. It returns a function with that argument pre (or partially) applied.
+
+```
+> :type f
+Int -> Int -> Int
+
+> g = f 1
+
+> :type g
+Int -> Int
+
+> g 5
+6
+```
+
+As we see, `increment` has the value 1 partially applied, so, when we later apply `increment 5`, the body of the function `(+) x y` becomes `(+) 1 5` and therefore the result 6.
+
+We can apply all arguments at once, but that just seems like “all at once”:
+
+```purescript
+> f 1 2
+3
+```
+
+But this is what is really happening (more or less 😅)
+```purescript
+> (f 1) 2
+3
+
+> f 1 $ 2
+3
 ```
 
