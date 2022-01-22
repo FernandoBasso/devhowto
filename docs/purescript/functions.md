@@ -25,7 +25,7 @@ Applying a lambda expression right then and there:
 
 Assigning a lambda expression to a variable:
 
-```purescript
+```haskell
 > f = (\n -> mod n 2)
 > f 3
 1
@@ -72,7 +72,7 @@ In `f1` we `eq` compare `0` with the application `(mod n 2)`. In `f2` we `eq` co
 
 Making an alias to `mod`:
 
-```purescript
+```haskell
 infixr 4 mod as %
 
 f2 :: Int -> Boolean
@@ -88,7 +88,7 @@ f3 = (_ % 2) >>> eq 0
 
 Let’s define a function that “takes two arguments”:
 
-```purescript
+```haskell
 f :: Int -> Int -> Int
 f x y = (+) x y
 ```
@@ -120,13 +120,13 @@ As we see, `increment` has the value 1 partially (or pre) applied, so, when we l
 
 We can apply all arguments at once, but that just seems like “all at once”:
 
-```purescript
+```haskell
 > f 1 2
 3
 ```
 
 But this is what is really happening (more or less 😅)
-```purescript
+```haskell
 > (f 1) 2
 3
 
@@ -155,7 +155,7 @@ With Object Oriented languages with create specializations from generalizations 
 
 Consider the function `replace` from the `Data.String` module:
 
-```purescript
+```haskell
 > import Data.String
 > :type replace
 Pattern -> Replacement -> String -> String
@@ -166,7 +166,7 @@ Pattern -> Replacement -> String -> String
 
 `replace` replaces any `Pattern` with some `Replacement`. We could make it more specialized by partially applying its `Pattern` argument.
 
-```purescript
+```
 > replaceSpaces = replace (Pattern " ")
 
 > :type replaceSpaces
@@ -180,7 +180,7 @@ Now, the function `replaceSpaces` is a specialized version of the more generic `
 
 We could further specialize `replace` by partially applying the first two arguments. In this case, the `Pattern` and the `Replacement` specialize the function, and the remaining argument is the `String` to which the substitution will be performed on:
 
-```purescript
+```haskell
 > replaceSpacesWithHyphen = replace (Pattern " ") (Replacement "-")
 
 > :type replaceSpacesWithHyphen
@@ -192,7 +192,7 @@ String -> String
 
 Since `replaceSpaces` exist, we could specialize from that instead of from the original `replace`:
 
-```fcb
+```
 > replaceSpaces = replace (Pattern " ")
 
 > replaceSpacesWithHyphen = replaceSpaces (Replacement "-")
@@ -207,7 +207,7 @@ Since `replaceSpaces` exist, we could specialize from that instead of from the o
 
 Here's one example using `replaceAll` with proper type signatures:
 
-```purescript
+```haskell
 import Data.String.Pattern (Pattern(..), Replacement(..))
 import Data.String.Common (replaceAll)
 
