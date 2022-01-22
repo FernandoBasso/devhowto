@@ -93,9 +93,13 @@ f :: Int -> Int -> Int
 f x y = (+) x y
 ```
 
-In fact, it does NOT take two arguments. It takes one argument, and returns a function that takes the other argument, which then returns the final, sum result.
+The function `f` is curried by default. It is the default PureScript (and Haskell) behavior that all functions are curried by default (unless you make some tuple magic to de-curry a function).
 
-Partially apply `myAdd`, that is, pass one argument. It returns a function with that argument pre (or partially) applied.
+### The Quintessential “add 1” Example
+
+In fact, `f` does NOT take two arguments. It takes one argument, and returns a function that takes the other argument, which then returns the final, sum result.
+
+The *add 1* quintessential partial application example:
 
 ```
 > :type f
@@ -110,7 +114,9 @@ Int -> Int
 6
 ```
 
-As we see, `increment` has the value 1 partially applied, so, when we later apply `increment 5`, the body of the function `(+) x y` becomes `(+) 1 5` and therefore the result 6.
+Partially apply `f`, that is, pass one argument. It returns a function with that argument already applied. `g` now is the partially applied `f`.
+
+As we see, `increment` has the value 1 partially (or pre) applied, so, when we later apply `increment 5`, the body of the function `(+) x y` becomes `(+) 1 5` and therefore the result 6.
 
 We can apply all arguments at once, but that just seems like “all at once”:
 
@@ -128,3 +134,86 @@ But this is what is really happening (more or less 😅)
 3
 ```
 
+!!! tip "Currying and Partial Application"
+
+    When we define a function, we say it is a curried function if it has this property of not requiring all arguments at once upon application. PureScript and Haskell functions are curried by default. No especial syntax or anything else is needed to get curried functions.
+
+    So, **currying** happens (automatically) when we define functions.
+
+    After a function exists, we can *apply the function to arguments*. If we apply less than the total number of arguments the function requires to be fully applied, we say we *partially applied the function*.
+
+    Therefore, **partial application** happens when applying (invoking, calling) the function (if less than the total number of argument a function requires to be fully applied are provided).
+
+    A partially applied function returns a function which some of the parameters applied, still awaiting for the remaining parameters to fully realize the function application, which then produces the final value or result.
+
+    Also note that the returned function from a partial application is itself curried.
+
+
+### Example with replace
+
+With Object Oriented languages with create specializations from generalizations  mostly through the use of inheritance and interfaces. In functional languages, we do this mostly through composition and partial application.
+
+Consider the function `replace` from the `Data.String` module:
+
+```purescript
+> import Data.String
+> :type replace
+Pattern -> Replacement -> String -> String
+
+> replace (Pattern " ") (Replacement "-") "Tomb Raider I 1996"
+"Tomb-Raider I 1996"
+```
+
+`replace` replaces any `Pattern` with some `Replacement`. We could make it more specialized by partially applying its `Pattern` argument.
+
+```purescript
+> replaceSpaces = replace (Pattern " ")
+
+> :type replaceSpaces
+Replacement -> String -> String
+
+> replaceSpaces (Replacement "-") "Tomb Raider I 1996"
+"Tomb-Raider I 1996"
+```
+
+Now, the function `replaceSpaces` is a specialized version of the more generic `replace`, in which it always replaces *spaces* with some `Replacement`.
+
+We could further specialize `replace` by partially applying the first two arguments. In this case, the `Pattern` and the `Replacement` specialize the function, and the remaining argument is the `String` to which the substitution will be performed on:
+
+```purescript
+> replaceSpacesWithHyphen = replace (Pattern " ") (Replacement "-")
+
+> :type replaceSpacesWithHyphen
+String -> String
+
+> replaceSpacesWithHyphen "Tomb Raider I 1996"
+"Tomb-Raider I 1996"
+```
+
+Since `replaceSpaces` exist, we could specialize from that instead of from the original `replace`:
+
+```fcb
+> replaceSpaces = replace (Pattern " ")
+
+> replaceSpacesWithHyphen = replaceSpaces (Replacement "-")
+
+> replaceSpacesWithHyphen "Tomb Raider I 1996"
+"Tomb-Raider I 1996"
+```
+
+!!! info "Examples in JavaScript"
+
+    I have some examples of creating specialized functions from generic functions through the use of currying and partial application in this [Code Sandbox project](https://codesandbox.io/s/webinar-functional-programming-in-javascript-ts0jt?file=/src/replace1.js). It is talk I sometimes give to introduce or motivate coworkers about functional programming.
+
+Here's one example using `replaceAll` with proper type signatures:
+
+```purescript
+import Data.String.Pattern (Pattern(..), Replacement(..))
+import Data.String.Common (replaceAll)
+
+replaceSpaces :: Replacement -> String -> String
+replaceSpaces r s = replaceAll (Pattern " ") r s
+
+replaceSpacesWithHyphens :: String -> String
+replaceSpacesWithHyphens s = replaceSpaces (Replacement "-") s
+```
