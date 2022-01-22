@@ -10,3 +10,8 @@
 - [PereScript Jordan’s Reference](https://jordanmartinez.github.io/purescript-jordans-reference-site/) – free online.
 
 - [Real World Halogen](https://github.com/thomashoneyman/purescript-halogen-realworld) – reference project.
+
+## Useful Libraries
+
+- [Haloggen Select](https://citizennet.github.io/purescript-halogen-select/) - Well-documented library to create Dropdown and Typehead Select components.
+ 
