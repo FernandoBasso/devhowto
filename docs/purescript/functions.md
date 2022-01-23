@@ -1,5 +1,6 @@
 # PureScript Function
 
+## Intro Notes
 Import `Prelude` and other stuff to play around with these examples in the REPL.
 
 !!! tip "REPL or module‽"
@@ -9,6 +10,10 @@ Import `Prelude` and other stuff to play around with these examples in the REPL.
 !!! danger "Bad function names‽"
 
     Some of these functions have non-meaningful names on purpose. The idea is that we know what a function does by careful scrutiny of the signature and implementation as a way to force ourselves to read and understand each bit.
+
+    If we say `add1 = ...`, we immediately know this functions adds 1 to its argument. If we name it `f` or `g, we have to read the signature and implementation carefully to understand its ideas and what it does.
+
+    That is a terrible idea for production code, but a very good approach to study, practice, ponder about stuff, and *learn*.
 
 
 ## Lambda Expression
@@ -44,8 +49,6 @@ f1 :: Int -> Boolean
 f1 = eq 0 <<< (_ `mod` 2)
 ```
 
-
-
 Verifying if a number is even:
 
 ```
@@ -61,11 +64,7 @@ true
 true
 ```
 
-
-
-In `f1` we `eq` compare `0` with the application `(mod n 2)`. In `f2` we `eq` compare `eq (mod n 2)` with`0`.
-
-
+In `f1` we `eq` compare `0` with the application `(mod n 2)`. In `f2` we `eq` compare `eq (mod n 2)` with `0`.
 
 ## Aliasing functions to infix symbol
 

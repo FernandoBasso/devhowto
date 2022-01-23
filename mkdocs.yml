@@ -33,6 +33,7 @@ nav:
   - Functional Programming:
     - PureScript:
       - Intro: purescript/intro.md
+      - REPL: purescript/repl.md
       - Functions: purescript/functions.md
 
 theme:
