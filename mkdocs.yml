@@ -35,6 +35,8 @@ nav:
       - Intro: purescript/intro.md
       - REPL: purescript/repl.md
       - Functions: purescript/functions.md
+  - PlantUML Diagrams:
+    - Sequence Diagrams: plantuml-diagrams/sequence.md
 
 theme:
   name: material
@@ -62,6 +64,8 @@ markdown_extensions:
       baselevel: 1
       separator: '-'
   - admonition
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
 
 extra:
   generator: false
