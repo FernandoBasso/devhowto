@@ -1,0 +1,29 @@
+/*
+ * Check the docs for CSS customization:
+ *
+ * • https://squidfunk.github.io/mkdocs-material/customization/#additional-css
+ * • https://squidfunk.github.io/mkdocs-material/customization/#additional-css
+ */
+
+/**
+* The default main content width is generally OK, but feels too “narrow”
+* for QA with nested admonitions, especially because we also make admonition
+* text a bit larger.
+*/
+.md-grid {
+  /**
+   * This is the default `max-width: 61rem`.
+   */
+  max-width: 64rem;
+}
+
+/**
+ * Admonition default text and code font size feels too small.
+ */
+.md-typeset :is(.admonition, details) {
+  font-size: 0.8rem;
+}
+
+.md-typeset code {
+  font-size: 0.8rem;
+}
