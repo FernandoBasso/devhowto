@@ -30,6 +30,8 @@ nav:
       - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
       - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
       - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
+    - Quizzes:
+      - Basic Types: typescript/quizzes/basic-types.md
   - Functional Programming:
     - PureScript:
       - Intro: purescript/intro.md
