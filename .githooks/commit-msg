@@ -17,6 +17,7 @@ commit_types=(
   compfpjs
   conf
   deno
+  diagram
   docs
   emacs
   exercism
