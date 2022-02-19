@@ -30,6 +30,7 @@ commit_types=(
   purescript
   style
   tnadv
+  typescript
   vim
 )
 
