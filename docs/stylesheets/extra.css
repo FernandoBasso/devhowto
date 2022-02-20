@@ -27,3 +27,19 @@
 .md-typeset code {
   font-size: 0.7rem;
 }
+
+/**
+ * Let's make unordered lists use three different style types for first,
+ * second, and third level.
+ */
+.md-content ul > li {
+  list-style-type: disc;
+}
+
+.md-content ul > li > ul > li {
+  list-style-type: square;
+}
+
+.md-content ul > li > ul > li > ul > li {
+  list-style-type: circle;
+}
