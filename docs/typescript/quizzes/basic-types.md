@@ -8,7 +8,7 @@
     const log: Console["log"] = console.log.bind(console);
     ```
 
-## Question
+## undefined, null, booleans and conditionals
 
 !!! question
 
@@ -39,7 +39,7 @@
         no
         ```
 
-## Question
+## assign undefined and null to boolean type
 
 !!! question
 
@@ -63,7 +63,7 @@
         
         Sometimes `const` vs `let/var` causes types to be inferred differently, but not here. See the next question.
         
-## Question 
+## var, let, const type inference with primitives
 
 !!! question
 
@@ -83,7 +83,7 @@
 
         - [TypeScript Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAHhC8ECIAWIEG4BQB6LEID0B+DDAGwFMAXCATzkQBMB7AV3W1wOIwGMmA7AM7UAXvQQBrcv3Y48eIkA)
 
-## Question
+## var, let, const type inference with functions
 
 !!! question
 
@@ -105,7 +105,7 @@
 
         - [TypeScript Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAZhC8EAoCUcB8ECMBuAUAejwggD0B+HHAGwFMAXCAczkRVnQCZcCiyKBjAPYA7AM70AFs2RoIAZi6EiJUkA)
 
-## Question
+## composite types
 
 !!! question
 
@@ -124,7 +124,7 @@
 
         - indexes and types of an array's elements
 
-## Question
+## importance of composite types
 
 !!! question
 
@@ -134,7 +134,7 @@
 
         Because TypeScript uses a **structural type system**, which means the structure of types matter (instead of names of types, as in nominative typed languages, which means pretty much all other languages).
 
-## Question
+## structural typing
 
 !!! question
 
