@@ -21,6 +21,7 @@ nav:
       - Resistor Color Duo: exercism/typescript/resistor-color-duo.md
       - Resistor Color Trio: exercism/typescript/resistor-color-trio.md
   - TypeScript:
+    - typescript/index.md
     - Ted Navard Advanced TypeScript (video notes):
       - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
       - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
@@ -46,11 +47,12 @@ theme:
     accent: indigo
   custom_dir: overrides
   features:
-    # - toc.integrate
     - content.code.annotate
     - navigation.tabs
     - navigation.sections
     - navigation.expand
+    - navigation.top
+    - navigation.index
 
 extra_css:
   - stylesheets/extra.css
