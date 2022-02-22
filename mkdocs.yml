@@ -74,6 +74,14 @@ markdown_extensions:
   - plantuml_markdown:
       server: http://www.plantuml.com/plantuml
 
+plugins:
+  - enumerate-headings:
+      toc_depth: 6
+      strict: true
+      increment_across_pages: false
+      exclude:
+        - index.md
+
 extra:
   generator: false
   social:
