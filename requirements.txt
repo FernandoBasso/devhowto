@@ -2,7 +2,6 @@
 # $ pip3 show \
 #     mkdocs \
 #     mkdocs-material \
-#     mkdocs-enumerate-headings-plugin \
 #     plantuml-markdown \
 #     | grep '\(Name\|Version\)'
 #
@@ -14,4 +13,3 @@
 mkdocs==1.2.3
 mkdocs-material==8.1.11
 plantuml-markdown==3.5.1
-mkdocs-enumerate-headings-plugin==0.5.0
