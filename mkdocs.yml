@@ -33,6 +33,7 @@ nav:
       - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
     - Quizzes:
       - Basic Types: typescript/quizzes/basic-types.md
+      - Type Assertions: typescript/quizzes/type-assertions.md
   - Functional Programming:
     - PureScript:
       - Intro: purescript/intro.md
