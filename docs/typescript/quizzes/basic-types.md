@@ -8,7 +8,7 @@
     const log: Console["log"] = console.log.bind(console);
     ```
 
-## undefined, null, booleans and conditionals
+## Booleans and conditionals, `undefined`, `null`
 
 !!! question
 
@@ -39,7 +39,7 @@
         no
         ```
 
-## assign undefined and null to boolean type
+## Assign `undefined` and `null` to boolean type
 
 !!! question
 
@@ -63,7 +63,7 @@
         
         Sometimes `const` vs `let/var` causes types to be inferred differently, but not here. See the next question.
         
-## var, let, const type inference with primitives
+## Type inference with primitives and `var`, `let` and `const`
 
 !!! question
 
@@ -81,9 +81,9 @@
         
         The reason is that both `var` and `let` allow reassignment, so we could replace `x` and `y` with other strings, but because we used `const` for `z`, we can't possible change its value; its value will forever and ever be the particular string `"ken"` and that is why `z`'s type is inferred to be that particular literal type rather than the generic `string` type as with the other two cases.
 
-        - [TypeScript Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAHhC8ECIAWIEG4BQB6LEID0B+DDAGwFMAXCATzkQBMB7AV3W1wOIwGMmA7AM7UAXvQQBrcv3Y48eIkA)
+        - [TS Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAHhC8ECIAWIEG4BQB6LEID0B+DDAGwFMAXCATzkQBMB7AV3W1wOIwGMmA7AM7UAXvQQBrcv3Y48eIkA)
 
-## var, let, const type inference with functions
+## Type inference with functions, `var`, `let` and `const`
 
 !!! question
 
@@ -103,9 +103,9 @@
 
         The reason is that TypeScript inspects literal values and the return values of functions (it knows `h` returns a number), but it doesn't inspects the entire function logic to make sure our function implementation will always return the specific number 3.
 
-        - [TypeScript Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAZhC8EAoCUcB8ECMBuAUAejwggD0B+HHAGwFMAXCAczkRVnQCZcCiyKBjAPYA7AM70AFs2RoIAZi6EiJUkA)
+        - [TS Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAZhC8EAoCUcB8ECMBuAUAejwggD0B+HHAGwFMAXCAczkRVnQCZcCiyKBjAPYA7AM70AFs2RoIAZi6EiJUkA)
 
-## composite types
+## Composite types
 
 !!! question
 
@@ -124,7 +124,7 @@
 
         - indexes and types of an array's elements
 
-## importance of composite types
+## Importance of composite types
 
 !!! question
 
@@ -134,7 +134,7 @@
 
         Because TypeScript uses a **structural type system**, which means the structure of types matter (instead of names of types, as in nominative typed languages, which means pretty much all other languages).
 
-## structural typing
+## Structural typing
 
 !!! question
 
@@ -161,4 +161,4 @@
 
     ??? "Answer"
 
-        Yes, we can. TypeScript uses *structural typing* (not *nominative typing), which in this case means the types (could be interfaces as well) `Profile` and `Jedi` are *interchangeable* because both have the same *shape* (structure). The names of the types are not that important for type-checking here. They are important for readability and to convey intent.
+        Yes, we can. TypeScript uses *structural typing* (not *nominative typing*), which in this case means the types `Profile` and `Jedi` are *interchangeable* because both have the same *shape* (structure). The names of the types are not that important for type-checking here. They are important for readability and to convey intent.
