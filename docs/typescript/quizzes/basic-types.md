@@ -8,6 +8,32 @@
     const log: Console["log"] = console.log.bind(console);
     ```
 
+## What is the type?
+
+!!! question
+
+    ```ts
+    var p;
+    let q;
+    ```
+
+    What are the types of `p` and `q`? Explain.
+
+    ??? "Answer"
+
+        Both `p` and `q` are of the type `any`, which essentially means **untyped**. In places where TypeScript inference cannot possibly work and we don't specify a type ourselves, the `any` “type” is the default.
+        
+        We quote “type” because `any` is is a “type” which means *any type is OK here*, but which is not really a type. It is more or less like the value `NaN`. The type of the value `NaN` is `number`, but a value of `NaN` is not a number; it is equal to nothing, not even itself.
+
+        In short, `any` “is a type”, which means *any type is OK*, which essentially *untypes* the identifier it is used with.
+
+        The snippet above is the same as:
+
+        ```ts
+        var p: any;
+        let q: any; 
+        ```
+
 ## Booleans and conditionals, `undefined`, `null`
 
 !!! question
