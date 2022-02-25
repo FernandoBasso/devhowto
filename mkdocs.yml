@@ -32,6 +32,7 @@ nav:
       - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
       - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
     - Quizzes:
+      - typescript/quizzes/index.md
       - Basic Types: typescript/quizzes/basic-types.md
       - Type Assertions: typescript/quizzes/type-assertions.md
   - Functional Programming:
