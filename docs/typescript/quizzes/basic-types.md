@@ -116,6 +116,8 @@
 
         And remember, the **value** of `w` is still the `number` 1. So, we may lie about the types, but the executed JavaScript will go its merry way (because what is executed is JavaScript, not TypeScript) and then we'll have to pretend that we are surprised when things break.
 
+        - [TS Playground](https://www.typescriptlang.org/play?#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQDcAhgCcYAB1TQp7RJRgBGEQHpNMGAD0A-KOJdZQ4dpiAkwnUwuEmGACuAW2Y4pAGkchYBNQT89EA)
+
 ## Type inference with primitives and `var`, `let` and `const`
 
 !!! question
@@ -215,3 +217,52 @@
     ??? "Answer"
 
         Yes, we can. TypeScript uses *structural typing* (not *nominative typing*), which in this case means the types `Profile` and `Jedi` are *interchangeable* because both have the same *shape* (structure). The names of the types are not that important for type-checking here. They are important for readability and to convey intent.
+
+## Left-hand vs right-hand typing
+
+!!! question
+
+    Explain the difference between *left-hand* and *right-hand* typing and give some examples.
+
+    ??? "Answer"
+
+        Left-hand typing occurs when we annotate a *name* (identifier) with the colon followed by a type syntax:
+
+        ```ts
+        let foo: SomeType = someValue; 
+        ```
+
+        Note that the type declaration happens on the left of the assignment operator. That is why it is called *left-hand typing*. Also, we used explicit typing here. Left-hand typing has to be explicit. Always.
+
+        Right-hand typing happens when we do not explicitly use the colon syntax, but rather let type inference kick in, or when we use `as` type assertions (or its alternative `<TypeCast>` syntax). Both happen to the right hand side of the assignment operator. Some examples:
+
+        ```ts
+        const min = -Infinity; // <1>
+
+        let user = getUser(1); // <2>
+
+        // <3>
+        const btnSignIn =
+          document.getElementById('btn-sign-in') as HTMLButtonElement | null;
+
+        // <4>
+        const btnSignUp =
+          <HTMLButtonElement | null> document.getElementById('btn-sign-up');
+        ```
+
+        1. Right-hand typing with type inference (implicit typing). `min` is inferred to be of type `number`. 
+
+        2. Right-hand typing with type inference (implicit typing). `user` is either `User` or `undefined`, which are the two possible types `getUser()` can return.
+
+        3. Right-hand typing with type assertion (explicit typing using type assertion). Here, we, the developers of the application know that if we have an element with the `id` ‘btn-sign-in’, it will certainly be of type `HTMLButtonElement`, but if it is not there, then it is `null`.
+
+        4. Same as the previous.
+
+        !!! info
+
+            We used `null` instead of `undefined` if `getElementById()` fails to find an element because that is what it returns if the element isn't found.
+
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0&ssl=39&ssc=85&pln=39&pc=1#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYVACeABxwwAqhBwAnSjADewmDFYdUYAK4BbZkpGawAQwM5U0Re0QiAviOEB6V29cwABnoWKIby0IeBwAMygAWgALc04YCWkOek9hXlg-JQhUAEFFRXNxAB55JQA+FTwNNS0dGABGABoYCytUAgBNEA5zAhhHRurVWtQAJmbW6xgCHOisAGtzGAAVOJA+gaGRmABmCcspmcK4JYBlHGA9Ao3B0hcwvTBgKFZwGEQcKFLFLkzFAEk6t9CNoyPxUN8YAAfGCPDjhdg4DhqaqKT5XMCw-wQehhdjcLjDbT9fiUCrEiiUrFKQFCYSOUTuTwwACiAA9LJJcCEQGEYHZENEorF4hBtDJEvYUky0phYAZ2CpIv8wHiwKwJIIYMzNDAAHoAflEuAy-hUHy+-i49Tp7k0htE6RgzCgYFOrEQYBVKg4IEuVjAUHoFpZuADUAAQuJAVwAOQusCRMWeyLsWOk8whAASywAsgAZCN6KBQcChnDh6EtPRwOAiO26h2pO0AOQA8ssWahltFWCFgJmonBWPMZBBxIHzGzgjBzHAsLOElIZJn-C9wM1mMX4CAQPMQsPR7PmQAlHDmZ6uABqehwrgA6jhmK5PsB6NQQAZJOAcIH3z2ZG8TMgnHSdpzCEBlESFcIDXV5IGCZluRCSRFB-BIQBgVCQGYMMQjiZEPjAJQ5zgcQYAMSCZDRUADADeFklSJ0E3dT1ZEkFQihzAsixLMsw1-WAYX0WsKl9f1BODT5y3DKMY3jV0kw9RM9EkdNBCAA)
+
+
+        
