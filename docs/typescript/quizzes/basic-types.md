@@ -89,6 +89,22 @@
         
         Sometimes `const` vs `let/var` causes types to be inferred differently, but not here. See the next question.
         
+## Assigning different types
+
+!!! question
+
+    ```ts
+    let w: string = 1;
+    ```
+
+    Explain what the compiler thinks about the snippet above.
+
+    ??? "Answer"
+
+        TypeScript complains about it. It kindly let's us know that “type 'number' is not assignable to type 'string'.” It has reason to believe we are out of our minds. Why would we be assigning a value of type `number` to a variable we said to be of the type `string`?
+
+        And remember, the **value** of `w` is still the `number` 1. So, we may lie about the types, but the executed JavaScript will go its merry way (because what is executed is JavaScript, not TypeScript) and then we'll have to pretend that we are surprised when things break.
+
 ## Type inference with primitives and `var`, `let` and `const`
 
 !!! question
