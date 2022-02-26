@@ -8,6 +8,17 @@
     const log: Console["log"] = console.log.bind(console);
     ```
 
+## The `any` “type”
+
+!!! question
+
+    Explain the `any` type.
+
+    ??? "Answer"
+
+        The `any` type is a top type. All other types are part of it. But the catch is that when used, (explicitly or implicitly when we don't provide a type and TypeScript can't infer one), it essentially *untypes* the thing it is being used on. So, yeah, we call it a type, but it is so generic that in practice it is like not typing and not allowing type inference to work either.
+
+
 ## What is the type?
 
 !!! question
