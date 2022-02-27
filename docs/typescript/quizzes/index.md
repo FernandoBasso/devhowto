@@ -1,6 +1,26 @@
-# Intro
+## Intro
 
 Here are quizzes (questions and answers, really) about useful or tricky parts of TypeScript. Some questions may also cover the relation to JavaScript (we may say something is of some type, but its value may actually be of some other type, think about type assertions, for example).
+
+## tsconfig.json
+
+For the examples and questions in this section of the site, unless otherwise noted, assume `tsconfig.json` is using the most strict type-related flags possible.
+
+There is a family of options related to strict mode regarding types. You can enable them one by one, or simply use `"strict": true`, like this:
+
+```json
+{
+  "compilerOptions": {
+    "strict": true
+  }
+}
+```
+
+As of 2022, the [docs say](https://www.typescriptlang.org/tsconfig#strict):
+
+> The `strict` flag enables a wide range of type checking behavior that results in stronger guarantees of program correctness. Turning this on is equivalent to enabling all of the *strict mode family* options.
+>
+> Future versions of TypeScript may introduce additional stricter checking under this flag, so upgrades of TypeScript might result in new type errors in your program. When appropriate and possible, a corresponding flag will be added to disable that behavior.
 
 ## Identifier names
 
