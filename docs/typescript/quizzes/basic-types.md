@@ -302,3 +302,65 @@
         This is called *[narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)*. It is technique the TypeScript type checker uses to *narrow* types down. That is, to make inferences based on conditionals, type guards and other constructions that permits more generic types to be *narrowed down* to more concrete and specific types.
 
         - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQHoAVBOEwJMAGIgATgFsAhlAgw1MMAFcVzHEphQQpgO7mOOYK3VwYABzhrgOLXojtE2mBxBYNQgZOSgACxx-W3s1RwgcJzUlDWV6ULFhADM9MGAoVnBTEAAVAHUQABEYhwguADc4vRxUfUNjflRoJR8YAG8ZGCUcKD0lMBhGuGb6M3lWAA8cbgAmIWEAX1FJaVkFZXVNPzbjVmBJpqizGABVAGVK6jHhvIBPGCyDjXTZTJy8gpFMz3SoNS6tAxGEwAHxg3R8nThUB6YF8AxgMFYWRgXCgrycOBA2KmzUoFCoBDaUII-H6gwxYjEGOZGIAegB+UQs4ajcYwAAGABIYIK+mZylUanE6iScPwNvyRCzGSzVWr1WzORitoMeWMJkKRWLShVqnZalwAHKQ4xg6Zy+WKwYqjWut3MjmbUTEXEgEFcACMABZ6ABmACc-HWPuBDy4BGDYfDNKEQA)
+
+## typeof type guard
+
+!!! question
+
+    ```ts
+    const one = new Number(1);
+
+    if (typeof one === "number") {
+      // code inside the if block
+    }
+    ```
+
+    Does the snippet above execute the “code inside the `if` block”? Explain.
+
+    ??? "Answer"
+
+        No, the code inside the `if` block **is not executed**.
+
+        The reason is that `one` is not a literal number, but an object. `typeof new Number(1)` results in the string "object", not the string "number".
+
+        Similar misconceptions and problems would occur with the `String` constructor as well. And Some people say that `typeof` is broken (ECMAScript spec requires it to behave like this). It is crazy:
+
+        ```repl
+        > typeof null
+        'object'
+        > typeof undefined
+        'undefined'
+        > typeof []
+        'object'
+        > typeof new Array(3)
+        'object'
+        ```
+
+        And we can convert objects back to their literals:
+
+        ```repl
+        > var n = new Number(1)
+
+        > typeof n
+        'object'
+
+        > typeof +n
+        'number'
+
+        > typeof Number(n)
+        'number'
+
+        > var s = new String("hello")
+
+        > typeof s
+        'object'
+
+        > typeof String(s)
+        'string'
+        ```
+
+        Using TypeScript does not relieve developers from knowing JavaScript. TypeScript is a superset of JavaScript. You can study TypeScript as much as you possible can, but if you lack JavaScript skills, you are in for trouble nonetheless.
+
+        Remember, TypeScript is a type layer on top of JavaScript, not a JavaScript replacement.
+
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQDcAhgCcY4HJRhgcAdxgA5AK4BbZjilcAjENGsAZjC5QAngAccIc3MoUqBMNt1SC-GAG9hMPBIXAQSih563iIAvsI4cBDy-oHEIWoA8gAqMGHuOpHGsUA)
