@@ -33,7 +33,7 @@
     ??? "Answer"
 
         Both `p` and `q` are of the type `any`, which essentially means **untyped**. In places where TypeScript inference cannot possibly work and we don't specify a type ourselves, the `any` “type” is the default.
-        
+
         We quote “type” because `any` is is a “type” which means *any type is OK here*, but which is not really a type. It is more or less like the value `NaN`. The type of the value `NaN` is `number`, but a value of `NaN` is not a number; it is equal to nothing, not even itself.
 
         In short, `any` “is a type”, which means *any type is OK*, which essentially *untypes* the identifier it is used with.
@@ -42,7 +42,7 @@
 
         ```ts
         var p: any;
-        let q: any; 
+        let q: any;
         ```
 
 ## Booleans and conditionals, `undefined`, `null`
@@ -93,13 +93,13 @@
     ??? "Answer"
 
         No, they are not valid. The literal types `undefined` and `null` DO NOT count as boolean values (they belong to the `undefined` and `null` types).
-        
+
         Sure, they can be used in conditionals where booleans are expected, but that is because they are first coerced to actual booleans before the condition itself being evaluated.
 
         !!! tip "var vs let vs const and type inference"
-        
+
         Sometimes `const` vs `let/var` causes types to be inferred differently, but not here. See the next question.
-        
+
 ## Assigning different types
 
 !!! question
@@ -133,7 +133,7 @@
     ??? "Answer"
 
         `x` and `y` are of the primitive type `string`, while `z` is of the literal type `"ken"` (the particular string “ken”).
-        
+
         The reason is that both `var` and `let` allow reassignment, so we could replace `x` and `y` with other strings, but because we used `const` for `z`, we can't possible change its value; its value will forever and ever be the particular string `"ken"` and that is why `z`'s type is inferred to be that particular literal type rather than the generic `string` type as with the other two cases.
 
         - [TS Playground](https://www.typescriptlang.org/play?#code/G4QwTgBAHhC8ECIAWIEG4BQB6LEID0B+DDAGwFMAXCATzkQBMB7AV3W1wOIwGMmA7AM7UAXvQQBrcv3Y48eIkA)
@@ -229,7 +229,7 @@
         Left-hand typing occurs when we annotate a *name* (identifier) with the colon followed by a type syntax:
 
         ```ts
-        let foo: SomeType = someValue; 
+        let foo: SomeType = someValue;
         ```
 
         Note that the type declaration happens on the left of the assignment operator. That is why it is called *left-hand typing*. Also, we used explicit typing here. Left-hand typing has to be explicit. Always.
@@ -250,7 +250,7 @@
           <HTMLButtonElement | null> document.getElementById('btn-sign-up');
         ```
 
-        1. Right-hand typing with type inference (implicit typing). `min` is inferred to be of type `number`. 
+        1. Right-hand typing with type inference (implicit typing). `min` is inferred to be of type `number`.
 
         2. Right-hand typing with type inference (implicit typing). `user` is either `User` or `undefined`, which are the two possible types `getUser()` can return.
 
@@ -265,4 +265,40 @@
         - [TS Playground](https://www.typescriptlang.org/play?jsx=0&ssl=39&ssc=85&pln=39&pc=1#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYVACeABxwwAqhBwAnSjADewmDFYdUYAK4BbZkpGawAQwM5U0Re0QiAviOEB6V29cwABnoWKIby0IeBwAMygAWgALc04YCWkOek9hXlg-JQhUAEFFRXNxAB55JQA+FTwNNS0dGABGABoYCytUAgBNEA5zAhhHRurVWtQAJmbW6xgCHOisAGtzGAAVOJA+gaGRmABmCcspmcK4JYBlHGA9Ao3B0hcwvTBgKFZwGEQcKFLFLkzFAEk6t9CNoyPxUN8YAAfGCPDjhdg4DhqaqKT5XMCw-wQehhdjcLjDbT9fiUCrEiiUrFKQFCYSOUTuTwwACiAA9LJJcCEQGEYHZENEorF4hBtDJEvYUky0phYAZ2CpIv8wHiwKwJIIYMzNDAAHoAflEuAy-hUHy+-i49Tp7k0htE6RgzCgYFOrEQYBVKg4IEuVjAUHoFpZuADUAAQuJAVwAOQusCRMWeyLsWOk8whAASywAsgAZCN6KBQcChnDh6EtPRwOAiO26h2pO0AOQA8ssWahltFWCFgJmonBWPMZBBxIHzGzgjBzHAsLOElIZJn-C9wM1mMX4CAQPMQsPR7PmQAlHDmZ6uABqehwrgA6jhmK5PsB6NQQAZJOAcIH3z2ZG8TMgnHSdpzCEBlESFcIDXV5IGCZluRCSRFB-BIQBgVCQGYMMQjiZEPjAJQ5zgcQYAMSCZDRUADADeFklSJ0E3dT1ZEkFQihzAsixLMsw1-WAYX0WsKl9f1BODT5y3DKMY3jV0kw9RM9EkdNBCAA)
 
 
-        
+## Type narrowing
+
+!!! question
+
+
+    ```ts
+    /**
+     * Formats a numeric value to USD currency format.
+     */
+    function toUSD(value: number | string): string {
+      if (typeof value === "number") {
+        //        <1>
+
+        return `$ ${toTWoDecimals(value)}`;
+        //                         <2>
+      }
+
+      return `$ ${toTWoDecimals(Number(value))}`;
+      //                                <3>
+    }
+    ```
+
+    What is the type of `value` is 1, 2 and 3? Explain.
+
+    ??? "Answer"
+
+        One could think the type of `value` is always the union type `number | string` because that is what the parameter type annotation says. That is not the case, however.
+
+        1. Here the type is really the union `number | string`. At this point in the body of the function, nothing causes TypeScript to think otherwise.
+
+        2. Here, TypeScript knows that `value` has to be a number. It knows it because it sees our `typeof` comparison. Given our test in the conditional, if we are inside this `if` block, then `value` can't possibly be anything other than `number`.
+
+        3. Our union type is `number | string`. If we get past the condition (checking that `value` is a number) and its return statement, then, `value` is definitely **not** a number. Therefore, it must be a `string`. So, here, `value` is of type `string`.
+
+        This is called *[narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)*. It is technique the TypeScript type checker uses to *narrow* types down. That is, to make inferences based on conditionals, type guards and other constructions that permits more generic types to be *narrowed down* to more concrete and specific types.
+
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQHoAVBOEwJMAGIgATgFsAhlAgw1MMAFcVzHEphQQpgO7mOOYK3VwYABzhrgOLXojtE2mBxBYNQgZOSgACxx-W3s1RwgcJzUlDWV6ULFhADM9MGAoVnBTEAAVAHUQABEYhwguADc4vRxUfUNjflRoJR8YAG8ZGCUcKD0lMBhGuGb6M3lWAA8cbgAmIWEAX1FJaVkFZXVNPzbjVmBJpqizGABVAGVK6jHhvIBPGCyDjXTZTJy8gpFMz3SoNS6tAxGEwAHxg3R8nThUB6YF8AxgMFYWRgXCgrycOBA2KmzUoFCoBDaUII-H6gwxYjEGOZGIAegB+UQs4ajcYwAAGABIYIK+mZylUanE6iScPwNvyRCzGSzVWr1WzORitoMeWMJkKRWLShVqnZalwAHKQ4xg6Zy+WKwYqjWut3MjmbUTEXEgEFcACMABZ6ABmACc-HWPuBDy4BGDYfDNKEQA)
