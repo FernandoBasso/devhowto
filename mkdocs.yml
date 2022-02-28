@@ -34,6 +34,7 @@ nav:
     - Quizzes:
       - typescript/quizzes/index.md
       - Basic Types: typescript/quizzes/basic-types.md
+      - Composite Types: typescript/quizzes/composite-types.md
       - Type Assertions: typescript/quizzes/type-assertions.md
   - Functional Programming:
     - PureScript:
