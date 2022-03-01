@@ -364,3 +364,28 @@
         Remember, TypeScript is a type layer on top of JavaScript, not a JavaScript replacement.
 
         - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQDcAhgCcY4HJRhgcAdxgA5AK4BbZjilcAjENGsAZjC5QAngAccIc3MoUqBMNt1SC-GAG9hMPBIXAQSih563iIAvsI4cBDy-oHEIWoA8gAqMGHuOpHGsUA)
+
+## Incompatible Types
+
+!!! question
+
+    ```ts
+    type Timeout = number;
+
+    //
+    // <1> We get red squiggly stuff here. Expected.
+    //
+    var t1: Timeout = "42";
+
+    //
+    // <2> No complaints whatsoever from the compiler.
+    //
+    var t2: Timeout = t1;
+    ```
+
+    Why don't we get errors from the compiler on 2?
+
+    ??? "Answer"
+
+        We have already been warned about the incompatibility of assigning the string "42" to `t1`, which is of the type `Timeout` (alias to `number`) in 1. At this point, since both `t1` and `t2` are of the type `Timeout`, the type checker has nothing more to say about it.
+
