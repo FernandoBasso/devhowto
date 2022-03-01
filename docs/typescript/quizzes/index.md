@@ -66,4 +66,8 @@ What does the function `f` do? Let's add a good name.
               | otherwise = go (n - 1) (acc + n)
     ```
 
-If we just see a nice name, it primes our brain to think like “Yeah, I understand this”, but some times, **we don't understand**. Again, for real, production code, spend whatever time it takes to come up with the best possible names. But when studying, depending on the purpose of the given question, exercise or situation, occasionally the good naming of identifiers defeats the whole goal.
+If we just see a nice name, it primes our brain to think like “Yeah, I understand this”, but some times, **we don't really understand it**.
+
+Again, for real, production code, we ought to spend whatever time it takes to come up with the best possible names. But when studying, depending on the purpose of the given question, exercise or situation, occasionally the good naming of identifiers defeats the whole goal.
+
+The idea is that in certain situations, purposefully using non-meaningful names ends up forcing us to pay close attention to the whole code, flow, types, etc. making the entire experience harder, but much more prone to actually teaching us something.
