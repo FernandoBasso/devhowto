@@ -365,7 +365,7 @@
 
         - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYQDcAhgCcY4HJRhgcAdxgA5AK4BbZjilcAjENGsAZjC5QAngAccIc3MoUqBMNt1SC-GAG9hMPBIXAQSih563iIAvsI4cBDy-oHEIWoA8gAqMGHuOpHGsUA)
 
-## Incompatible Types
+## Incompatible type assignment
 
 !!! question
 
@@ -389,3 +389,4 @@
 
         We have already been warned about the incompatibility of assigning the string "42" to `t1`, which is of the type `Timeout` (alias to `number`) in 1. At this point, since both `t1` and `t2` are of the type `Timeout`, the type checker has nothing more to say about it.
 
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYVACeABxwwAKqwC2OEAFdYVMCoXMcAJxHCA9IaOGYAZRW6cAGhiAMAigBGezFYQYIAGYwoACxkJaQd5JVUoeztmNRgCABYAJgI3DwBDGGhddkR6UzkA3ykZYADgAGs9ahAFSThU9jTmcLcoO1TOGCzEPyg4cQyQehhAHAIAdT9xPPdfP2ngXVSAL36OHAA3HARpXRgOEGyZ9wB+YbaIMo9-QKLqUordXONhNdSd51RQ5RiqeKSRYxgMAAekdTHlzDhbA5nK5ptBWHA4J4fFdCsF7J9wvZHiYwQDxv0wCAYHpdCBdB4AtYjjBRjIykSAO7QlwpGCMslgHJgl5vBIfRRfdS+Jz-EwA8zsYAyRys6beGbXdGYtSRRVo4p3PR5fzsC6HDzTADyAGkcUA)
