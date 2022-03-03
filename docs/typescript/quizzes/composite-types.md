@@ -158,3 +158,47 @@
         ```
 
         Neither inferred type matches the type `Game`. It is different from the snippet from the previous question where the explicit type annotation of the (wrongly shaped) objects `tr2` and `tr3` caused further assignment of those objects to appear OK.
+
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYVACeABxwwA4gEMAtjKoBvYTBhRWUXKmgAndohGbxOeQdRgArouY4DIgL4jhvWADN5Aax8AmShh1TW1dHFQCAAkLADdxGABZHCh5OFQAMXoAQXoAaXz6GH8CABoNGEk4eShPEANFCFRCOHYbAA8ymAJFeWAuggB3dg4QQYgycudRDxgACx1esCCQrR09bqjF+TBUDA4cMCUZABYAdjKK80tUfwAGB-LNKpq6hqaYQmHOMYnSKbcs0QxwAjKgFMogt4-P5AZhYMDlP5wccggsoEs3EA)
+
+## Can we really pass these as parameters?
+
+!!! question
+
+    ```ts
+    const user = {
+      id: 1,
+      name: "John Doe",
+    };
+
+    const jedi = {
+      name: "Ahsoka Tano",
+      skills: ["The Force", "Lightsaber"],
+    };
+
+    type WithName = {
+      name: string;
+    };
+
+    function getName(obj: WithName): string {
+      return obj.name;
+    }
+
+    // <1>
+    log(getName(user));
+
+    // <2>
+    log(getName(jedi));
+    ```
+
+    Neither `user` nor `jedi` are of the type `WithName`. Can we pass them to `getName()` in 1 and 2? Explain.
+
+    ??? "Answer"
+
+        Yes, we can. TypeScript is all about **structural typing**. If we say the parameter `obj` has to be of type `WithName`, and we pass objects that, among other things, has the property `name` with a value of type `string`, then the type checker is happy.
+
+        TypeScript does type inference for both `user` and `jedi`. It sees they both have a property `name` with a string value. So, it knows that the inferred types of these two objects *structurally* match the type `WithName`, therefore, [Everything's Alright](https://youtu.be/Cdux5CnfPI) and [All Is Full of Love](https://youtu.be/u0cS1FaKPWY).
+
+        When we use the type `WithName`, we are saying we care about the property `name`. It has to exist and be a string. Other excess properties are OK. Our function is defining a contract stating it requires anything that satisfies `name: string`. Both `user` `jedi` do satisfy that contract.
+
+        - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYb1gBXCDgBOlGAG9hMGKw6oAjABplMMAEMAtjlQEAUiAAWYGABEQOAjoC+IsZlgArHB1bylKgbGpgCCllgA1vowACr6YCBOuhARrHBwEKiEMZY4MABiIDLAjlowBAAyrIiWUBD6zLJkLm5QAJ4ADnkA6qxQlgByRnlUAXrDqNAy7IgirqIAZhJgwFCs4DCIOFBDxlwgzJ6ovf27OPyTUNNgiIq6MtsSMjYHnvRBOHOiAPTfMAA8GgAfMJiFwtjthlwpLJ+EIfn9-gAmEFgiFnLjeXxwty-YS-GDdPLAeIwDr6CAQGCADAIYTJqTB4hwaVjWAyoCAaeiofwGY0STCYCAFjAphJVk99HAYO0OjN6PjvkA)
