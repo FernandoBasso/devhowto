@@ -61,6 +61,8 @@ extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
+  - meta
+  - attr_list
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight:
@@ -70,7 +72,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - toc:
-      permalink: '#'
+      permalink: ''
       baselevel: 1
       separator: '-'
   - admonition
