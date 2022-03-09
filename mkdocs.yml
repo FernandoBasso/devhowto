@@ -1,49 +1,5 @@
 site_name: Dev How To
 
-nav:
-  - Home: index.md
-  - Command Line:
-    - Shell Redirection: command-line/shell-redirection.md
-    - tar: command-line/tar.md
-    - unzip: command-line/unzip.md
-    - grep: command-line/grep.md
-    - Useful SSH Commands: command-line/ssh-useful-commands.md
-    - Git:
-      - Git Add: command-line/git/git-add.md
-  - Text Editors:
-    - Vim:
-      - Vim Useful Tips: text-editors/vim/useful-tips.md
-      - Vim Gotchas: text-editors/vim/gotchas.md
-  - Exercism:
-    - Intro: exercism/index.md
-    - TypeScript:
-      - Two-Fer: exercism/typescript/two-fer.md
-      - Resistor Color Duo: exercism/typescript/resistor-color-duo.md
-      - Resistor Color Trio: exercism/typescript/resistor-color-trio.md
-  - TypeScript:
-    - typescript/index.md
-    - Ted Navard Advanced TypeScript (video notes):
-      - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
-      - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
-      - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
-      - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
-      - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
-      - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
-      - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
-      - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
-    - Quizzes:
-      - typescript/quizzes/index.md
-      - Basic Types: typescript/quizzes/basic-types.md
-      - Composite Types: typescript/quizzes/composite-types.md
-      - Type Assertions: typescript/quizzes/type-assertions.md
-  - Functional Programming:
-    - PureScript:
-      - Intro: purescript/intro.md
-      - REPL: purescript/repl.md
-      - Functions: purescript/functions.md
-  - PlantUML Diagrams:
-    - Sequence Diagrams: plantuml-diagrams/sequence.md
-
 theme:
   name: material
   palette:
@@ -84,3 +40,61 @@ extra:
   social:
     - icon: fontawesome/brands/gitlab
       link: https://gitlab.com/fernandobasso
+
+
+######################################################################
+######################## Site navigation and pages ###################
+######################################################################
+
+nav:
+  - Home: index.md
+
+  - Command Line:
+    - Shell Redirection: command-line/shell-redirection.md
+    - tar: command-line/tar.md
+    - unzip: command-line/unzip.md
+    - grep: command-line/grep.md
+    - Useful SSH Commands: command-line/ssh-useful-commands.md
+
+    - Git:
+      - Git Add: command-line/git/git-add.md
+
+  - Text Editors:
+    - Vim:
+      - Vim Useful Tips: text-editors/vim/useful-tips.md
+      - Vim Gotchas: text-editors/vim/gotchas.md
+
+  - Exercism:
+    - Intro: exercism/index.md
+
+    - TypeScript:
+      - Two-Fer: exercism/typescript/two-fer.md
+      - Resistor Color Duo: exercism/typescript/resistor-color-duo.md
+      - Resistor Color Trio: exercism/typescript/resistor-color-trio.md
+
+  - TypeScript:
+    - typescript/index.md
+    - Ted Navard Advanced TypeScript (video notes):
+      - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
+      - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
+      - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
+      - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
+      - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
+      - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
+      - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
+      - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
+
+    - Quizzes:
+      - typescript/quizzes/index.md
+      - Basic Types: typescript/quizzes/basic-types.md
+      - Composite Types: typescript/quizzes/composite-types.md
+      - Type Assertions: typescript/quizzes/type-assertions.md
+
+  - Functional Programming:
+    - PureScript:
+      - Intro: purescript/intro.md
+      - REPL: purescript/repl.md
+      - Functions: purescript/functions.md
+
+  - PlantUML Diagrams:
+    - Sequence Diagrams: plantuml-diagrams/sequence.md
