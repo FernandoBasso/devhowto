@@ -1,4 +1,8 @@
-# Basic Types Quiz | TypeScript
+---
+title: TypeScript Basic Types Quiz
+---
+
+# TypeScript Basic Types Quiz
 
 !!! info "log"
 

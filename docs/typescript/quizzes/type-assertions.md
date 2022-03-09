@@ -1,4 +1,8 @@
-# Type Assertions (a.k.a. Type Casting)
+---
+title: TypeScript Type Assertions (a.k.a Type Casting)
+---
+
+# TypeScript Type Assertions (a.k.a. Type Casting)
 
 !!! note
     *Type assertions* (also known as type casting) are useful and sometimes really (really!) necessary, but **dangerous if used incorrectly**. I'm not against using them (I don't think it is even possible to *never* use them). I just hope some of these questions help people have a better appreciation of how, where and why they are dangerous.

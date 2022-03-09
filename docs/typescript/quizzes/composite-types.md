@@ -1,4 +1,8 @@
-# Composite Types
+---
+title: TypeScript Composite Types Quiz
+---
+
+# TypeScript Composite Types Quizz
 
 ## Structural Types Again
 

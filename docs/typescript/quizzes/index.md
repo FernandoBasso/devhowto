@@ -1,3 +1,7 @@
+---
+title: TypeScript Quizzes
+---
+
 ## Intro
 
 Here are quizzes (questions and answers, really) about useful or tricky parts of TypeScript. Some questions may also cover the relation to JavaScript (we may say something is of some type, but its value may actually be of some other type, think about type assertions, for example).
