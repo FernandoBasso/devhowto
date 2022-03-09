@@ -202,3 +202,50 @@
         When we use the type `WithName`, we are saying we care about the property `name`. It has to exist and be a string. Other excess properties are OK. Our function is defining a contract stating it requires anything that satisfies `name: string`. Both `user` `jedi` do satisfy that contract.
 
         - [TS Playground](https://www.typescriptlang.org/play?jsx=0#code/MYewdgzgLgBANiA5gLhgYXBEcCmBtAIgUQIF0YBeGUSbHAOmPoCMBLMAEwAoatcBKANwAoYb1gBXCDgBOlGAG9hMGKw6oAjABplMMAEMAtjlQEAUiAAWYGABEQOAjoC+IsZlgArHB1bylKgbGpgCCllgA1vowACr6YCBOuhARrHBwEKiEMZY4MABiIDLAjlowBAAyrIiWUBD6zLJkLm5QAJ4ADnkA6qxQlgByRnlUAXrDqNAy7IgirqIAZhJgwFCs4DCIOFBDxlwgzJ6ovf27OPyTUNNgiIq6MtsSMjYHnvRBOHOiAPTfMAA8GgAfMJiFwtjthlwpLJ+EIfn9-gAmEFgiFnLjeXxwty-YS-GDdPLAeIwDr6CAQGCADAIYTJqTB4hwaVjWAyoCAaeiofwGY0STCYCAFjAphJVk99HAYO0OjN6PjvkA)
+
+
+## Excess and missing property checks
+
+!!! question
+
+    Explain excess and missing property checks? When do they occur? Equally important, whey do they not occur?
+
+    ??? "Answer"
+
+        Excess and missing property checks happen when we say a composite type (like an object) is of some type, but provide excess properties (extraneous properties not present in the type definition), or fail to provide required properties. These excess and missing property checks only happen when doing *direct assignment*. They do not occur when the assignment is not a direct assignment.
+
+        ```ts
+        type Xenomorph = {
+          height: number;
+          speed: number;
+        };
+
+        // Direct assignment. Excess/missing property checks kick in.
+        const x1: Xenomorph = { height: 2.1 };
+
+        // Not a “direct assignment”. No property checks here.
+        const x2: Xenomorph = x1;
+
+        declare function f(x: Xenomorph): void;
+
+        // No property checks.
+        f(x1);
+
+        // No property checks.
+        f(x2);
+
+        // Direct assignment. Property checks kick in!
+        // Missing ‘height’ property.
+        f({ speed: 11 });
+
+        // Direct assignment. Property checks kick in!
+        // Extraneous ‘power’ property.
+        f({ height: 2.1, speed: 11, power: 143 });
+        ```
+
+        A direct assignment is when we explicitly assign properties. A non-direct (or indirect?) assignment is when we re-assign something to a different reference.
+
+        Take a look and play around with these:
+
+        - [TS Playground from the code above](https://www.typescriptlang.org/play?jsx=0#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPGABRAA85PHoIAAV0VA4CRABPCCTkPDkAa1ouiABZM3pakxGxifRp2fmllY0IABEzdAXY2C2TQgBbPCVVgDlFAFoyK5uIOtqP2uqmaEDEZgez1enVA0wmEAAGi9UI8MBxkMUIABvUAQVh4CFsbCEeCPYQEdp42gTPBkYmk8nodoAX3ankuwNi4MhL0Q4ggfQG9GAj02tG2EA4e0mMzkx2WEEWZiWEFq4kiqVivQAjNgkYQUWiMSUsfjCYhsAAmcTaiCsjrMD5ciCAHAIgX9uU9eYBcAn5H0l0oOsvltHx13VZS1lr1yNR6HRmJ1bKkcms1wgvHghFU9kIGbqvRjBrj6Oa2GkqDMZDZkH9UvGMtKIfVvAL2raDogdcDhzlC2WLYLlo77N+qjB9y9Sn5owbQab-dDSpVtQAhJ4NltCDtABgE83NgEwCANz6aD03UvC07Da23MkeQDkeydQvm7E-BxeK5WLVWEdeQPpEHQUg8FQeBQx3DhUBcAgj3rfZT1AVtTX3EwiQga1tQAGggC8rwgG8cKgmCsAIgAWABmO0OyAA)
+        - [TS Playground with another Xenomorph example 😅 and some extra notes](https://www.typescriptlang.org/play?jsx=0#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPGABRAA85PHoIAAV0VA4CRABPCCTkPDkAa1ouiABZM3pakxGxifRp2fmllY0IABEzdAXY2C2TQgBbPCVVgDlFAFoyK5uIOtqP2uqmaEDEZgez1enVA0wmEAAGi9UI8MBxkMUIABvUAQVh4CFsbCEeCPYQEdp42gTPBkYmk8nodoAX3aTE8AAkCHgIC4ecRrhAgTdLDNwQ9thA8P1BrQIBw9pMzIMADS85BmOTITwuMyWSwQRDoCEmAhSmVDBXjSYzLULZbidllWLESzKwjYJGEFFojElHF4+aExDYABM4gAjCrcRBqXhadgI1GYxxUHysBAIwAWADM0dZHXUzFg5Hxgr5YMFj02tElVv2iGVtDVLg1Wt5eoNroYniNJrN9ZtpWOy3+1a2hB2g4OtpHctqnlqho1crkdDwzUdnWdEAAjvB4x7EcjUeh0ZiA-jg9gs+IAKz5tmdSAAFRXEF48EIqnshENxEWQYwQgaRXQPCBUF4ZceThHlAAwCL0fTPZBAEwCLcwE-b9G0UeVjSURC6ixK8TDYNU41pCBmU9E9fWabBpFQMwyGxGNcjqAADRCIFqXhUEwAAdQggxIkMIAAEixYS2GZQTyLpcSsTk5l2LaUBmULTluRbflBQ4cFJ2A0DLHA1tNQxFw6FwmR7HgWhRU8ORrmIRBaXECA302bi5W9F0hV+VQwXuJ4XkQNV9CFVAgLeAB5F9e2NExTXQc0BktRUZ2He1aHQ0AFVqRACNdd1VPZSBYEsBh5X0nZiBAsCYOQZzeUshVrNQWzRVKJyXLINy4P3Q8UM8Rq5XSNLrQOJtl1Ic0JlUWk1WEJBcImw47ROTwKAgGKXwgRZNUWbi-3mQUCRQAgcry-DkTqAaXhK0rizkVK5WnNa50rGCEqSijWxeCLJWFVRPHFYKlEW5afPVf7rlsyVata6QbLs21utpTw6lB2lQSMg8crK2MzGraxkpQSVGo4CZog7FAIHHWsDLe2csvx5gAEkoNqzCfxw5RALlWrcYapqRrpjAeTeqaUFITxpTmnq1XOmZHmIGZyQgAArWzYghb1rl66hlr+v9BfqrzPHput0sbVVptiXV9TiMxAM6tdbIlsZhHSR4BcQTx0C-RtnjcqhugAdVgAAlboIKg2hVfhiBzGkf6ha82PYxRGCpgmHV5j-Cx06hpz9RmSC7cNHOKnZUAgA)
