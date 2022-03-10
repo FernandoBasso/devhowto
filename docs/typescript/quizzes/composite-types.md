@@ -253,3 +253,59 @@ title: TypeScript Composite Types Quiz
 
         - [TS Playground from the code above](https://www.typescriptlang.org/play?jsx=0#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPGABRAA85PHoIAAV0VA4CRABPCCTkPDkAa1ouiABZM3pakxGxifRp2fmllY0IABEzdAXY2C2TQgBbPCVVgDlFAFoyK5uIOtqP2uqmaEDEZgez1enVA0wmEAAGi9UI8MBxkMUIABvUAQVh4CFsbCEeCPYQEdp42gTPBkYmk8nodoAX3ankuwNi4MhL0Q4ggfQG9GAj02tG2EA4e0mMzkx2WEEWZiWEFq4kiqVivQAjNgkYQUWiMSUsfjCYhsAAmcTaiCsjrMD5ciCAHAIgX9uU9eYBcAn5H0l0oOsvltHx13VZS1lr1yNR6HRmJ1bKkcms1wgvHghFU9kIGbqvRjBrj6Oa2GkqDMZDZkH9UvGMtKIfVvAL2raDogdcDhzlC2WLYLlo77N+qjB9y9Sn5owbQab-dDSpVtQAhJ4NltCDtABgE83NgEwCANz6aD03UvC07Da23MkeQDkeydQvm7E-BxeK5WLVWEdeQPpEHQUg8FQeBQx3DhUBcAgj3rfZT1AVtTX3EwiQga1tQAGggC8rwgG8cKgmCsAIgAWABmO0OyAA)
         - [TS Playground with another Xenomorph example 😅 and some extra notes](https://www.typescriptlang.org/play?jsx=0#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPGABRAA85PHoIAAV0VA4CRABPCCTkPDkAa1ouiABZM3pakxGxifRp2fmllY0IABEzdAXY2C2TQgBbPCVVgDlFAFoyK5uIOtqP2uqmaEDEZgez1enVA0wmEAAGi9UI8MBxkMUIABvUAQVh4CFsbCEeCPYQEdp42gTPBkYmk8nodoAX3aTE8AAkCHgIC4ecRrhAgTdLDNwQ9thA8P1BrQIBw9pMzIMADS85BmOTITwuMyWSwQRDoCEmAhSmVDBXjSYzLULZbidllWLESzKwjYJGEFFojElHF4+aExDYABM4gAjCrcRBqXhadgI1GYxxUHysBAIwAWADM0dZHXUzFg5Hxgr5YMFj02tElVv2iGVtDVLg1Wt5eoNroYniNJrN9ZtpWOy3+1a2hB2g4OtpHctqnlqho1crkdDwzUdnWdEAAjvB4x7EcjUeh0ZiA-jg9gs+IAKz5tmdSAAFRXEF48EIqnshENxEWQYwQgaRXQPCBUF4ZceThHlAAwCL0fTPZBAEwCLcwE-b9G0UeVjSURC6ixK8TDYNU41pCBmU9E9fWabBpFQMwyGxGNcjqAADRCIFqXhUEwAAdQggxIkMIAAEixYS2GZQTyLpcSsTk5l2LaUBmULTluRbflBQ4cFJ2A0DLHA1tNQxFw6FwmR7HgWhRU8ORrmIRBaXECA302bi5W9F0hV+VQwXuJ4XkQNV9CFVAgLeAB5F9e2NExTXQc0BktRUZ2He1aHQ0AFVqRACNdd1VPZSBYEsBh5X0nZiBAsCYOQZzeUshVrNQWzRVKJyXLINy4P3Q8UM8Rq5XSNLrQOJtl1Ic0JlUWk1WEJBcImw47ROTwKAgGKXwgRZNUWbi-3mQUCRQAgcry-DkTqAaXhK0rizkVK5WnNa50rGCEqSijWxeCLJWFVRPHFYKlEW5afPVf7rlsyVata6QbLs21utpTw6lB2lQSMg8crK2MzGraxkpQSVGo4CZog7FAIHHWsDLe2csvx5gAEkoNqzCfxw5RALlWrcYapqRrpjAeTeqaUFITxpTmnq1XOmZHmIGZyQgAArWzYghb1rl66hlr+v9BfqrzPHput0sbVVptiXV9TiMxAM6tdbIlsZhHSR4BcQTx0C-RtnjcqhugAdVgAAlboIKg2hVfhiBzGkf6ha82PYxRGCpgmHV5j-Cx06hpz9RmSC7cNHOKnZUAgA)
+
+## typeof
+
+!!! question
+
+    Does `typeof` work exactly the same way in JavaScript and TypeScript? Give examples.
+
+    ??? "Answer"
+
+        At the **value level** (runtime), it works the same way. `typeof null` is "object", and `typeof 1` is "number", and so on and so on and so forth.
+
+        At the **type level**, it can be combined with the `type` TypeScript keyword to extract simple and composite (shapes) types from values.
+
+        ```ts
+        //
+        // Here we use ’typeof’ at the value level (runtime, which also acts
+        // as a type predicate in this case) to know if we can call
+        // ‘toFixed()’ directly on ’value’ of whether we should first coerce
+        // it into a number.
+        //
+        function formatToDecimalPlaces(
+          value: number | string,
+          numDecimals: number = 2,
+        ): string {
+          if (typeof value === "string")
+            return Number(value).toFixed(numDecimals);
+
+          return value.toFixed(numDecimals);
+        }
+
+        const initialState = {
+          items: [{
+              title: '',
+              quantity: 0,
+              price: 0,
+          }],
+        };
+
+        //
+        // Here, we use ‘typeof‘ at the type level to extract the type/shape
+        // of ‘initialState‘.
+        //
+        type InitialState = typeof initialState;
+        ```
+
+        By doing `typeof initialState`, we end up with a type like this:
+
+        ```ts
+        type InitialState = {
+          items: {
+            title: string;
+            quantity: number;
+            price: number;
+          }[];
+        };
+        ```
