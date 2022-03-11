@@ -262,15 +262,15 @@ title: TypeScript Composite Types Quiz
 
     ??? "Answer"
 
-        At the **value level** (runtime), it works the same way. `typeof null` is "object", and `typeof 1` is "number", and so on and so on and so forth.
+        In an **expression context** (runtime), it works the same way. `typeof null` is "object", and `typeof 1` is "number", and so on and so on and so forth (remember, it is JavaScript after all).
 
-        At the **type level**, it can be combined with the `type` TypeScript keyword to extract simple and composite (shapes) types from values.
+        In a **type context**, it can be combined with the `type` TypeScript keyword to extract simple and composite (shapes) types from variables (but not from literal values).
 
         ```ts
         //
-        // Here we use ’typeof’ at the value level (runtime, which also acts
-        // as a type predicate in this case) to know if we can call
-        // ‘toFixed()’ directly on ’value’ of whether we should first coerce
+        // Here we use ’typeof’ in an expression context (runtime, which also
+        // acts as a type predicate in this case) to know if we can call
+        // ‘toFixed()’ directly on ‘value’ of whether we should first coerce
         // it into a number.
         //
         function formatToDecimalPlaces(
@@ -292,8 +292,8 @@ title: TypeScript Composite Types Quiz
         };
 
         //
-        // Here, we use ‘typeof‘ at the type level to extract the type/shape
-        // of ‘initialState‘.
+        // Here we use ‘typeof’ in a type context to extract the
+        // type/shape of ‘initialState‘.
         //
         type InitialState = typeof initialState;
         ```
@@ -309,3 +309,34 @@ title: TypeScript Composite Types Quiz
           }[];
         };
         ```
+
+        - [TS Playground](https://www.typescriptlang.org/play?noImplicitAny=false#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPAAkCPAgXPvhaPsBMAkQATw48VF4RiFqIUgg8AA8OdDx6e0JSxURV2Lr0eCUzAFs8ABp+5DM5ZEXLBk8VRFpF9+IICamIdbwyHdiPt5jsUGZ3nI6Hhmt9KABrQioFzzXj9PpQnZQyyWTyADAJ3DgzCsAXVmnNARtVJZxhBFBA8dJiJZ4Hg5jMbngUAR0RBaGh4JYyBBeGZ0DFdgQ5HhPBZQe5FhBCPAzsICOImKBeCdVNsRRgzsCACqoAAieDk52ZAAVrNLaHVQBAIEyWXhsMrVTyAD58xDoWomS5OpUq82Ww1PD0qtXoYoQABMwea2BiAcIJggAG8Q2Y0XUftM0a7WcUiiUsmnA1lmiGNoh4EQIAA5GMEOolmHiQnE0me8NWp5tCLOiD1xs7Tvd1BEklkOr9i2D2jDgC+ETKsVqFjMzIAysoQSUc86LHgztwIBkT6PnYgLOlsAByJ-B2-OgCO8FI94m2AADG+77rHc7oQIBIarvkwaru0mqQD0Gy8kMfQEpMRZzAsXyFrsSgHHCywrP6rzfMgMqQIWwD8sQvwcni273vuh54HiGqdDhACShA7kxwJ9CUhYcgxu6WAefHtJAzoAHoAPwdAAVBERq3O8EKkX0OEciMXE8aJzF4pgI6jpx3GMXpfHxjet5nhe2BWe+v6Pn66YmO076jl+P4WOM0ZeugbnuX8AbSr5sYBbeq4ZPk4UQLBETycAQA)
+
+        !!! warning
+
+            In a type context, we cannot use `typeof` on literal values:
+
+            ```ts
+            // NOK
+            type TypeOfOneNOK = typeof 1;
+
+            // NOK
+            type TypeOfYodaNOK = typeof "Yoda";
+
+            // NOK
+            type TypeOfJediNOK = typeof { name: "Yoda", skill: "The Force" };
+
+            // OK
+            var one = 1;
+            type TypeOfOne = typeof one;
+
+            // OK
+            var yoda = "Yoda";
+            type TypeOfYoda = typeof yoda;
+
+            // OK
+            var jedi = { name: "Yoda", skill: "The Force" };
+            type TypeOfJedi = typeof jedi;
+            ```
+
+            - [Try it in the TS Playground](https://www.typescriptlang.org/play?noImplicitAny=false#code/PTBQIAkIgIIQQVwC4AsD2AnAXBAYgU3QDsBDQgE1QgCFiBnW1cYaCZRRAB1sxADMCS5VACM6DAHRk8AN2ABjVIUTE5iMJBhtO3PgNIVR9VOIDmAS0QAbYsPFnUwKdLQB3RA6YstXHsBf-JGVd3QNlPUFAFQlpECEtUE2wAYUUGSzwAbQAieJMsgF0IAF4IKLS8cVzxYTNyAAoy1HSASgBuCJBPABVkPAheM3QYiER0PD7iMYgXdEUTaeIAT1oIVF4IeFpa+cAMAkRFjjw1nYhakYO+qMQ8AA9EcU8r29jhPDliTcvSQlRYugBrfoYEa9c6HVbrSwWAjESwrM77cFPO4PTqeAByAHkANKgRF9LoXTG8TGEPBY7HFMFHdYARnaGJxeIuEEJh2JAE1UGRiBSqfi1hAslyeVkGZAKczwWy8MSAFJ4MhmPklAXrADeEBIAFs8NhhdziFkADQQWj-MyWSz6np9HAYOR4LIQAC+DKY3VBZLuEFuxG1HHSK0mfRxEFe70+p1iZhWKEuGDGqgWi087g2tD6ewux1OhGppUU1xRHs8TOkk1WZKp9KlBKJJOrqpz60UeHakAgEAAegB+DrMcuVxaGqkG0XtfGshsi4j8lsQEc8jvMLt9gcQIfoCAAK0VZipmp1eqFs5NZotVptoPt6Edzrdden7N4CqV88Ogr3SpXXZ7-Y9SBs0-XhAEwCPMIDnKdkVid580USxFnDPpPjIaYLGQCAK3QMwbCDU0fkQTwXAwuJoXQWFaFRMAgA)
