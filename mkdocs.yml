@@ -89,12 +89,14 @@ nav:
       - Basic Types: typescript/quizzes/basic-types.md
       - Composite Types: typescript/quizzes/composite-types.md
       - Type Assertions: typescript/quizzes/type-assertions.md
+      - Functions: typescript/quizzes/functions.md
 
   - Functional Programming:
     - PureScript:
       - Intro: purescript/intro.md
       - REPL: purescript/repl.md
       - Functions: purescript/functions.md
+      - QA Simple Types: purescript/qa-simple-types.md
 
   - PlantUML Diagrams:
     - Sequence Diagrams: plantuml-diagrams/sequence.md
