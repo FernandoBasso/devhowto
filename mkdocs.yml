@@ -98,8 +98,9 @@ nav:
     - PureScript:
       - Intro: purescript/intro.md
       - REPL: purescript/repl.md
+      - Number Types: purescript/number-types.md
+      - Char and String Types: purescript/char-string-types.md
       - Functions: purescript/functions.md
-      - QA Simple Types: purescript/qa-simple-types.md
 
   - PlantUML Diagrams:
     - Sequence Diagrams: plantuml-diagrams/sequence.md
