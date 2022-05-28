@@ -35,9 +35,6 @@ markdown_extensions:
   - plantuml_markdown:
       server: http://www.plantuml.com/plantuml
 
-plugins:
-  - include-markdown
-
 extra:
   generator: false
   social:
