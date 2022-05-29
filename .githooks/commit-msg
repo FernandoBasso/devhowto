@@ -28,10 +28,10 @@ commit_types=(
   kitty
   macos
   magfp
-  purescript
+  purs
   style
   tnadv
-  typescript
+  ts
   vim
 )
 
