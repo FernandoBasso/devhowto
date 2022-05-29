@@ -56,11 +56,11 @@ nav:
     - grep: command-line/grep.md
     - Useful SSH Commands: command-line/ssh-useful-commands.md
 
-  - Linux:
-    - Xfce Power User Tips: linux/xfce-power-tips.md
-
     - Git:
       - Git Add: command-line/git/git-add.md
+
+  - Linux:
+    - Xfce Power User Tips: linux/xfce-power-tips.md
 
   - Text Editors:
     - Vim:
@@ -77,6 +77,7 @@ nav:
 
   - TypeScript:
     - typescript/index.md
+    - Functions: typescript/functions.md
     - Ted Navard Advanced TypeScript (video notes):
       - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
       - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
