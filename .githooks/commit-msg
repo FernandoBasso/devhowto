@@ -10,30 +10,30 @@
 # Update manually when a new type needs to be added.
 #
 commit_types=(
-  chicken-scheme
-  chore
-  cmdline
-  codewars
-  compfpjs
-  conf
-  deno
-  diagram
-  docs
-  emacs
-  exercism
-  fix
-  git
-  haskell
-  htdp
-  kitty
-  macos
-  linux
-  magfp
-  purs
-  style
-  tnadv
-  ts
-  vim
+	chicken-scheme
+	chore
+	cmdline
+	codewars
+	compfpjs
+	conf
+	deno
+	diagram
+	docs
+	emacs
+	exercism
+	fix
+	git
+	haskell
+	htdp
+	kitty
+	macos
+	linux
+	magfp
+	purs
+	style
+	tnadv
+	ts
+	vim
 )
 
 ##
@@ -53,10 +53,17 @@ subject="$(sed --silent 1p < "$commit_editmsg_file")"
 #
 for t in "${commit_types[@]}"
 do
-  if printf %s "$subject" | grep --silent "^${t}: "
-  then
-    exit 0
-  fi
+	##
+	# This grep regex matches a commit type with or without a scope:
+	#
+	# • bash: msg here
+	# • bash(heredocs): msg here
+	# • bash(heredocs, redirects): msg here
+	#
+	if printf %s "$subject" | grep --silent "^${t}\(([^)]\+)\)\?: "
+	then
+		exit 0
+	fi
 done
 
 #
@@ -77,5 +84,5 @@ printf '  • %s\n' "${commit_types[@]}"
 exit 1
 
 #
-# vim: set tw=72:
+# vim: set tw=72 noexpandtab shiftwidth=2 tabstop=2:
 #
