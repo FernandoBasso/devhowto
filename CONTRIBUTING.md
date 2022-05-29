@@ -109,3 +109,24 @@ tutorials, etc. (mentioned above), and not generic commit types like “rb” or
 - magfp: [Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
 - compfpjs: [Composable Functional JavaScript](https://egghead.io/courses/professor-frisby-introduces-composable-functional-javascript)
 - ts(tnadv): [Ted Neward Busy TypeScript Developer’s Guide to Advanced TypeScript](https://www.youtube.com/watch?v=wD5WGkOEJRs)
+
+
+
+## Titles and Descriptions
+
+The heading 1 defines the page title in the browser, but we can override it with the front matter in each file:
+
+```
+---
+title: The REPL | PureScript
+description: Practical examples on how to use the PureScript repl to...
+---
+
+# The PureScript REPL
+
+REPL stands for Read, Eval, Print Loop, which...
+```
+
+The above will show the title REPL at the top of the rendered page in the browser, but the title bar will show "REPL | PureScript", which is what should be indexed by search engines and used for bookmarks, for example.
+
+**Because** this website contains stuff for multiple languages and tools, **always** append the main topic after a "|" character (as in the example above) so we know if we are seeing a REPL page for Node, PureScript, Haskell, Ruby, etc. Both search engines and mostly important, users, will appreciate it!
