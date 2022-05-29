@@ -1,3 +1,8 @@
+---
+title: Number Types | PureScript
+description: Learn about PureScript number types, their use and some useful tips and considerations about them.
+---
+
 # Simple Types | PureScript
 
 

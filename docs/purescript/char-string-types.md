@@ -1,3 +1,8 @@
+---
+title: Char and String Types | PureScript
+description: Learn about PureScript Char and String types, their use and some useful tips and considerations about them.
+---
+
 # Char and String Types
 
 ## Char

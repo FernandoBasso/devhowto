@@ -1,3 +1,8 @@
+---
+title: PureScript Introduction Notes and Resources
+description: Some introductory notes about TypeScript, resources documentation, tools and relevant topics.
+---
+
 # PureScript
 
 

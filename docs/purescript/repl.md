@@ -1,4 +1,9 @@
-# Read, Eval, Print Loop: REPL
+---
+title: REPL Read, Eval, Print, Loop | PureScript
+description: Practical examples of using the PureScript REPL to try things and inspect types and values
+---
+
+# Read, Eval, Print, Loop: REPL
 
 **NOTE**: Assume `import Prelude` in all examples unless otherwise noted.
 
@@ -33,7 +38,8 @@ Further information is available on the PureScript documentation repository:
 ```
 
 ## :type
-So, `:type` is for **expressions**:
+
+According to the help, `:type` is for **expressions**:
 
 ```text title="Use :type for expressions"
 > :type 'a'
@@ -70,7 +76,7 @@ Then we try something like:
 
 Wait! `1 .. 3` **is** an expression, and so is `range 1 3`. We just need to import `range` and its synonym `..` from some module that offers a `range` function:
 
-```text title="import range and (..)"
+```text title="import range and .."
 > import Data.List (range, (..))
 > :type 1 .. 3
 List Int
