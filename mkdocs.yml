@@ -49,59 +49,64 @@ extra:
 nav:
   - Home: index.md
 
-  - Command Line:
-    - Shell Redirection: command-line/shell-redirection.md
-    - tar: command-line/tar.md
-    - unzip: command-line/unzip.md
-    - grep: command-line/grep.md
-    - Useful SSH Commands: command-line/ssh-useful-commands.md
+  - Command Line and Shell Scripting:
+    - Shell Redirection: shell/shell-redirection.md
+    - tar: shell/tar.md
+    - unzip: shell/unzip.md
+    - grep: shell/grep.md
+    - Useful SSH Commands: shell/ssh-useful-commands.md
 
     - Git:
-      - Git Add: command-line/git/git-add.md
+      - Git Add: shell/git/git-add.md
 
-  - Linux:
-    - Xfce Power User Tips: linux/xfce-power-tips.md
-
-  - Text Editors:
-    - Vim:
-      - Vim Useful Tips: text-editors/vim/useful-tips.md
-      - Vim Gotchas: text-editors/vim/gotchas.md
-
-  - Exercism:
-    - Intro: exercism/index.md
+  - Programming Languages:
 
     - TypeScript:
-      - Two-Fer: exercism/typescript/two-fer.md
-      - Resistor Color Duo: exercism/typescript/resistor-color-duo.md
-      - Resistor Color Trio: exercism/typescript/resistor-color-trio.md
+      - programming-languages/typescript/index.md
+      - Functions: programming-languages/typescript/functions.md
+      - Ted Navard Advanced TypeScript (video notes):
+        - Intro: programming-languages/typescript/ted-neward-advanced-typescript/00-intro.md
+        - Type Compatibility: programming-languages/typescript/ted-neward-advanced-typescript/01-type-compatibility.md
+        - Simple and Compound Types: programming-languages/typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
+        - Decorators: programming-languages/typescript/ted-neward-advanced-typescript/03-decorators.md
+        - Symbols: programming-languages/typescript/ted-neward-advanced-typescript/04-symbols.md
+        - Iterators: programming-languages/typescript/ted-neward-advanced-typescript/05-iterators.md
+        - Generators: programming-languages/typescript/ted-neward-advanced-typescript/06-generators.md
+        - Generics: programming-languages/typescript/ted-neward-advanced-typescript/07-generics.md
 
-  - TypeScript:
-    - typescript/index.md
-    - Functions: typescript/functions.md
-    - Ted Navard Advanced TypeScript (video notes):
-      - Intro: typescript/ted-neward-advanced-typescript/00-intro.md
-      - Type Compatibility: typescript/ted-neward-advanced-typescript/01-type-compatibility.md
-      - Simple and Compound Types: typescript/ted-neward-advanced-typescript/02-simple-compound-types.md
-      - Decorators: typescript/ted-neward-advanced-typescript/03-decorators.md
-      - Symbols: typescript/ted-neward-advanced-typescript/04-symbols.md
-      - Iterators: typescript/ted-neward-advanced-typescript/05-iterators.md
-      - Generators: typescript/ted-neward-advanced-typescript/06-generators.md
-      - Generics: typescript/ted-neward-advanced-typescript/07-generics.md
-
-    - Quizzes:
-      - typescript/quizzes/index.md
-      - Basic Types: typescript/quizzes/basic-types.md
-      - Composite Types: typescript/quizzes/composite-types.md
-      - Type Assertions: typescript/quizzes/type-assertions.md
-      - Functions: typescript/quizzes/functions.md
+      - Quizzes:
+        - programming-languages/typescript/quizzes/index.md
+        - Basic Types: programming-languages/typescript/quizzes/basic-types.md
+        - Composite Types: programming-languages/typescript/quizzes/composite-types.md
+        - Type Assertions: programming-languages/typescript/quizzes/type-assertions.md
+        - Functions: programming-languages/typescript/quizzes/functions.md
 
   - Functional Programming:
     - PureScript:
-      - Intro: purescript/intro.md
-      - REPL: purescript/repl.md
-      - Number Types: purescript/number-types.md
-      - Char and String Types: purescript/char-string-types.md
-      - Functions: purescript/functions.md
+      - Intro: functional-programming/purescript/intro.md
+      - REPL: functional-programming/purescript/repl.md
+      - Number Types: functional-programming/purescript/number-types.md
+      - Char and String Types: functional-programming/purescript/char-string-types.md
+      - Functions: functional-programming/purescript/functions.md
 
-  - PlantUML Diagrams:
-    - Sequence Diagrams: plantuml-diagrams/sequence.md
+  - Algorithms and Data Structures:
+
+    - Exercism:
+      - Intro: algorithms-data-structures/exercism/index.md
+
+      - TypeScript:
+        - Two-Fer: algorithms-data-structures/exercism/typescript/two-fer.md
+        - Resistor Color Duo: algorithms-data-structures/exercism/typescript/resistor-color-duo.md
+        - Resistor Color Trio: algorithms-data-structures/exercism/typescript/resistor-color-trio.md
+
+  - Misc:
+    - Text Editors:
+      - Vim:
+        - Vim Useful Tips: misc/text-editors/vim/useful-tips.md
+        - Vim Gotchas: misc/text-editors/vim/gotchas.md
+
+    - Linux:
+      - Xfce Power User Tips: misc/linux/xfce-power-tips.md
+
+    - PlantUML Diagrams:
+      - Sequence Diagrams: misc/plantuml-diagrams/sequence.md
