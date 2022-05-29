@@ -53,6 +53,18 @@ Number
 Number
 ```
 
+They Int-typed operations are made to return integers with some use of bitwise operators, as we can see in `.spago/prelude/v6.0.0/src/Data/Ring.js`:
+
+```js
+export const intSub = function (x) {
+  return function (y) {
+    return x - y | 0;
+  };
+};
+```
+
+
+
 ## Typing a number
 
 As we saw, 1 is `Int`, while `1.0` or `1e0` is `Number`. We cannot force a value like `1` to be `Number` simply by adding a type annotation like in Haskell.
@@ -92,5 +104,7 @@ To make negative numbers, use the unary `-` operator (requires parenthesis) or t
 ```
 
 
+
+## References
 
 - [Official Docs on PureScript Types](https://github.com/purescript/documentation/blob/master/language/Types.md).
