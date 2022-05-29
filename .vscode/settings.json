@@ -1,4 +1,10 @@
 {
   "editor.rulers": [78, 96],
-  "plantuml.server": "https://www.plantuml.com/plantuml"
+  "plantuml.server": "https://www.plantuml.com/plantuml",
+  "cSpell.words": [
+    "mkdocs",
+    "plantuml",
+    "PSCI",
+    "purs"
+  ]
 }

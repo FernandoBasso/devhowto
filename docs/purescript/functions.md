@@ -1,17 +1,23 @@
+---
+title: Functions | PureScript
+description: Learn about PureScript functions, their practical use, examples, tips and insights.
+---
+
 # PureScript Function
 
 ## Intro Notes
-Import `Prelude` and other stuff to play around with these examples in the REPL.
+
+Assume `import Prelude` unless otherwise noted.
 
 !!! tip "REPL or module‽"
 
-    If you see `>` it means to run the code in the REPL, otherwise, assume it is in a module.
+    If you see `>` as the first character in a line, it means we are in the REPL, otherwise, assume it is in a module.
 
 !!! danger "Bad function names‽"
 
     Some of these functions have non-meaningful names on purpose. The idea is that we know what a function does by careful scrutiny of the signature and implementation as a way to force ourselves to read and understand each bit.
 
-    If we say `add1 = ...`, we immediately know this functions adds 1 to its argument. If we name it `f` or `g, we have to read the signature and implementation carefully to understand its ideas and what it does.
+    If we say `add1 = ...`, we immediately know this functions adds 1 to its argument. If we name it `f` or `g`, we have to read the signature and implementation carefully to understand its ideas and what it does.
 
     That is a terrible idea for production code, but a very good approach to study, practice, ponder about stuff, and *learn*.
 
@@ -27,6 +33,45 @@ Applying a lambda expression right then and there:
 > (\n -> (n `mod` 2)) 5
 0
 ```
+
+Note that functions are not *printable*; they do not have an instance of the type class `Show`:
+
+``` haskell
+(\n -> n) # (1)
+```
+
+It produces an error that we cannot "print" something that does not implement `Show`.
+
+1.  `> (\n -> n)`
+
+    Error found:
+    in module $PSCI
+    at <internal>:0:0 - 0:0 (line 0, column 0 - line 0, column 0)
+
+    No type class instance was found for
+
+        Data.Show.Show (t2 -> t2)
+
+    The instance head contains unknown type variables. Consider adding a type annotation.
+
+    while solving type class constraint
+
+    PSCI.Support.Eval (t2 -> t2)
+
+    while applying a function eval
+    of type Eval t1 => t1 -> Effect Unit
+    to argument it
+    while checking that expression eval it
+    has type Effect t0
+    in value declaration $main
+
+    where t0 is an unknown type
+        t1 is an unknown type
+        t2 is an unknown type
+
+    See https://github.com/purescript/documentation/blob/master/errors/NoInstanceFound.md for more information,
+    or to contribute content related to this error.
+
 
 Assigning a lambda expression to a variable:
 
