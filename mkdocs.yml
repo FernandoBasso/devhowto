@@ -56,6 +56,9 @@ nav:
     - grep: command-line/grep.md
     - Useful SSH Commands: command-line/ssh-useful-commands.md
 
+  - Linux:
+    - Xfce Power User Tips: linux/xfce-power-tips.md
+
     - Git:
       - Git Add: command-line/git/git-add.md
 

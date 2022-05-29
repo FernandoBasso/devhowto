@@ -27,6 +27,7 @@ commit_types=(
   htdp
   kitty
   macos
+  linux
   magfp
   purs
   style
