@@ -32,8 +32,6 @@ hello = "Hello, world!"
 
 withNl :: String
 withNl = "Contains a\nnewline."
-
-
 ```
 
 
@@ -60,4 +58,60 @@ This string spawns over multiple lines, but spaces to the  left of the ‘\’ a
 
 Spaces before the trailing `\` concatenate with spaces after the leading `\`.
 
-TODO: How to write more than four hex digits? Ex: `\x0001f4a9` to get the Pile of Poo 💩‽
+## Unicode
+
+We can use `\x` escapes with hexadecimal numbers to denote a Unicode code point.
+
+### Char
+
+For `Char`, as of PureScript 0.15, it seems we can use up to 4 bytes:
+
+```text
+> '\x2714'
+'✔'
+
+> '\x2717'
+'✗'
+
+> '\x03bb'
+'λ'
+
+> '\x203d'
+'‽'
+
+> '\x0001f4a9'                                                                     
+Unexpected a at line 1, column 10
+> '\x1f4a9'   
+Illegal astral code point in character literal at line 1, column 9
+```
+
+### String
+
+For `String`, we can use up to 6 bytes (which as of 2022, is enough every Unicode code point without using surrogates, since as of this day, Unicode goes up to 10FFFF).
+
+```text
+> "\x2714"    
+"✔"
+
+> "\x1f4a9"   
+"💩"
+
+> "\x01f4a9"
+"💩"
+
+> "\x0001f4a9"
+"Ǵa9"
+```
+
+Surrogates work with `String`, but not with `Char`:
+
+```
+> "\xD83d\xDCA9"
+"💩"
+
+> '\xD83d\xDCA9'
+Unexpected \ at line 1, column 8
+```
+
+See [this discussion on the PureScript Discord server](https://discord.com/channels/864614189094928394/865617619464749081/981167025546227812) about this topic and [this issue on the PureScript repo](https://github.com/purescript/purescript/issues/3750).
+
