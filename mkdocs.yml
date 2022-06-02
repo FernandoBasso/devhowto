@@ -107,6 +107,7 @@ nav:
       - Vim:
         - Vim Useful Tips: misc/text-editors/vim/useful-tips.md
         - Vim Gotchas: misc/text-editors/vim/gotchas.md
+        - CoC and LSP: misc/text-editors/vim/coc-lsp.md
 
     - Linux:
       - Xfce Power User Tips: misc/linux/xfce-power-tips.md
