@@ -11,7 +11,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - navigation.index
+    - navigation.indexes
 
 extra_css:
   - stylesheets/extra.css
