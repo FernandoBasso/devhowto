@@ -58,3 +58,55 @@ Other :: String -> ReasonToCancel
 
 That is, the “function” `Other` is a function from `String` to `ReasonToCancel`. It maps one type to another.
 
+
+## Type Variables
+
+We can make the `Other` data constructor take a type we don't know yet, instead of hard-coding it as `String`:
+
+```purs
+data WhyCancel a -- <1>
+  = TooManyEmails
+  | NotInterested
+  | Other a -- <2>
+
+becauseWithString :: WhyCancel String -- <3>
+becauseWithString = Other "I don't like email ads."
+
+type Reason = { code :: Int, text :: String }
+
+becauseWithReason :: Reason -- <4>
+becauseWithReason =
+  { code: 7
+  , text: "I don't like ads."
+  }
+```
+
+Note the `a` **type variable** in 1 and 2. It means when we type something as `WhyCancel`, it takes a *type variable*, that is, some type, which is what we do in 3 and 4.
+
+## :kind
+
+As explained in the book Haskell From First Principles
+
+> Kinds are types one level up.
+
+In other words, *kinds* are types of types. Try this in the REPL:
+
+```purs-repl
+> import WhyCancel
+
+> :kind WhyCancel
+Type -> Type
+
+> :kind WhyCancel Int
+Type
+```
+
+In the first case, we get `Type -> Type`, which means `WhyCancel` is not fully realised; it still requires some a type to produce the final type. In the second case, we get `Type`, which means it has been fully realised and we are at a final, concrete type.
+
+We can, of course, create a type alias for it:
+
+```purs-repl
+> type T = WhyCancel String
+> :kind T
+Type
+```
