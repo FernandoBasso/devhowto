@@ -28,7 +28,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.details
   - toc:
-      permalink: ''
+      permalink: true
       baselevel: 1
       separator: '-'
   - admonition
