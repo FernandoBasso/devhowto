@@ -5,8 +5,6 @@ description: Learn about PureScript number types, their use and some useful tips
 
 # Simple Types | PureScript
 
-
-
 ## Numbers
 
 Numbers can be of type `Number` and `Int`. Both are represented as normal JavaScript numbers at runtime. `Int`, however, has operations defined differently so that we always get integer results:
@@ -62,8 +60,6 @@ export const intSub = function (x) {
   };
 };
 ```
-
-
 
 ## Typing a number
 

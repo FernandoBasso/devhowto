@@ -109,7 +109,7 @@ forall (t33 :: Type) (a :: t33 -> t33 -> Type) (b :: t33) (c :: t33) (d :: t33).
 
 You can take a look at `..` in [Pursuit](https://pursuit.purescript.org/packages/purescript-arrays/6.0.1/docs/Data.Array#v:(..)), click view source and see it is defined as:
 
-```haskell
+```purs
 infix 8 range as ..
 ```
 

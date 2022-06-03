@@ -7,7 +7,7 @@ description: Learn about PureScript Char and String types, their use and some us
 
 ## Char
 
-The `Char` type is written in single quotes. We can also use Unicode code points in hexadecimal to create a char. Notethe `\x...` escape sequence.
+The `Char` type is written in single quotes. We can also use Unicode code points in hexadecimal to create a char. Note the `\x...` escape sequence.
 
 ```purs
 charZ :: Char
@@ -17,8 +17,6 @@ check :: Char
 check = '\x2714'
 -- → ✔
 ```
-
-
 
 ## String
 
@@ -33,8 +31,6 @@ hello = "Hello, world!"
 withNl :: String
 withNl = "Contains a\nnewline."
 ```
-
-
 
 Multi-line:
 
@@ -79,9 +75,9 @@ For `Char`, as of PureScript 0.15, it seems we can use up to 4 bytes:
 > '\x203d'
 '‽'
 
-> '\x0001f4a9'                                                                     
+> '\x0001f4a9'
 Unexpected a at line 1, column 10
-> '\x1f4a9'   
+> '\x1f4a9'
 Illegal astral code point in character literal at line 1, column 9
 ```
 
@@ -90,10 +86,10 @@ Illegal astral code point in character literal at line 1, column 9
 For `String`, we can use up to 6 bytes (which as of 2022, is enough every Unicode code point without using surrogates, since as of this day, Unicode goes up to 10FFFF).
 
 ```text
-> "\x2714"    
+> "\x2714"
 "✔"
 
-> "\x1f4a9"   
+> "\x1f4a9"
 "💩"
 
 > "\x01f4a9"

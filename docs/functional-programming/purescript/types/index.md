@@ -13,3 +13,4 @@ PureScript ships with a few type facilities to help us deal with types. Basicall
 - New Type;
 
 See their related pages for more details.
+

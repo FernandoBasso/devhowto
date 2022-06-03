@@ -21,7 +21,6 @@ Assume `import Prelude` unless otherwise noted.
 
     That is a terrible idea for production code, but a very good approach to study, practice, ponder about stuff, and *learn*.
 
-
 ## Lambda Expression
 
 Applying a lambda expression right then and there:
@@ -36,51 +35,51 @@ Applying a lambda expression right then and there:
 
 Note that functions are not *printable*; they do not have an instance of the type class `Show`:
 
-``` haskell
+```purs
 (\n -> n) # (1)
 ```
 
 It produces an error that we cannot "print" something that does not implement `Show`.
 
-1.  `> (\n -> n)`
+```purs-repl
+> (\n -> n)
 
-    Error found:
-    in module $PSCI
-    at <internal>:0:0 - 0:0 (line 0, column 0 - line 0, column 0)
+Error found:
+in module $PSCI
+at <internal>:0:0 - 0:0 (line 0, column 0 - line 0, column 0)
 
-    No type class instance was found for
+No type class instance was found for
 
-        Data.Show.Show (t2 -> t2)
+    Data.Show.Show (t2 -> t2)
 
-    The instance head contains unknown type variables. Consider adding a type annotation.
+The instance head contains unknown type variables. Consider adding a type annotation.
 
-    while solving type class constraint
+while solving type class constraint
 
-    PSCI.Support.Eval (t2 -> t2)
+PSCI.Support.Eval (t2 -> t2)
 
-    while applying a function eval
-    of type Eval t1 => t1 -> Effect Unit
-    to argument it
-    while checking that expression eval it
-    has type Effect t0
-    in value declaration $main
+while applying a function eval
+of type Eval t1 => t1 -> Effect Unit
+to argument it
+while checking that expression eval it
+has type Effect t0
+in value declaration $main
 
-    where t0 is an unknown type
-        t1 is an unknown type
-        t2 is an unknown type
+where t0 is an unknown type
+    t1 is an unknown type
+    t2 is an unknown type
 
-    See https://github.com/purescript/documentation/blob/master/errors/NoInstanceFound.md for more information,
-    or to contribute content related to this error.
-
+See https://github.com/purescript/documentation/blob/master/errors/NoInstanceFound.md for more information,
+or to contribute content related to this error.
+```
 
 Assigning a lambda expression to a variable:
 
-```haskell
+```purs
 > f = (\n -> mod n 2)
 > f 3
 1
 ```
-
 
 ```
 module Data.Examples where
@@ -113,26 +112,23 @@ In `f1` we `eq` compare `0` with the application `(mod n 2)`. In `f2` we `eq` co
 
 ## Aliasing functions to infix symbol
 
-
 Making an alias to `mod`:
 
-```haskell
+```purs
 infixr 4 mod as %
 
 f2 :: Int -> Boolean
 f2 = eq 0 <<< (_ % 2)
 
-
 f3 :: Int -> Boolean
 f3 = (_ % 2) >>> eq 0
 ```
-
 
 ## Currying and Partial Application
 
 Let’s define a function that “takes two arguments”:
 
-```haskell
+```purs
 f :: Int -> Int -> Int
 f x y = (+) x y
 ```
@@ -164,13 +160,13 @@ As we see, `increment` has the value 1 partially (or pre) applied, so, when we l
 
 We can apply all arguments at once, but that just seems like “all at once”:
 
-```haskell
+```purs
 > f 1 2
 3
 ```
 
 But this is what is really happening (more or less 😅)
-```haskell
+```purs
 > (f 1) 2
 3
 
@@ -192,14 +188,13 @@ But this is what is really happening (more or less 😅)
 
     Also note that the returned function from a partial application is itself curried.
 
-
 ### Example with replace
 
 With Object Oriented languages with create specializations from generalizations  mostly through the use of inheritance and interfaces. In functional languages, we do this mostly through composition and partial application.
 
 Consider the function `replace` from the `Data.String` module:
 
-```haskell
+```purs
 > import Data.String
 > :type replace
 Pattern -> Replacement -> String -> String
@@ -224,7 +219,7 @@ Now, the function `replaceSpaces` is a specialized version of the more generic `
 
 We could further specialize `replace` by partially applying the first two arguments. In this case, the `Pattern` and the `Replacement` specialize the function, and the remaining argument is the `String` to which the substitution will be performed on:
 
-```haskell
+```purs
 > replaceSpacesWithHyphen = replace (Pattern " ") (Replacement "-")
 
 > :type replaceSpacesWithHyphen
@@ -251,7 +246,7 @@ Since `replaceSpaces` exist, we could specialize from that instead of from the o
 
 Here's one example using `replaceAll` with proper type signatures:
 
-```haskell
+```purs
 import Data.String.Pattern (Pattern(..), Replacement(..))
 import Data.String.Common (replaceAll)
 
