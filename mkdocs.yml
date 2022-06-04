@@ -88,8 +88,8 @@ nav:
       - Types:
         - functional-programming/purescript/types/index.md
         - Data Types: functional-programming/purescript/types/data-types.md
-      - Number Types: functional-programming/purescript/number-types.md
-      - Char and String Types: functional-programming/purescript/char-string-types.md
+        - Number Types: functional-programming/purescript/types/number-types.md
+        - Char and String Types: functional-programming/purescript/types/char-string-types.md
       - Functions: functional-programming/purescript/functions.md
 
   - Algorithms and Data Structures:
