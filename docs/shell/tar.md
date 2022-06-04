@@ -1,3 +1,8 @@
+---
+title: tar command line examples
+description: Some practical examples on using the tar command to create and extract archives
+---
+
 # tar command line examples
 
 ## Unpack an archive to existing directory
