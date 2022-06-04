@@ -101,7 +101,7 @@ Type -> Type
 Type
 ```
 
-In the first case, we get `Type -> Type`, which means `WhyCancel` is not fully realised; it still requires some a type to produce the final type. In the second case, we get `Type`, which means it has been fully realised and we are at a final, concrete type.
+In the first case, we get `Type -> Type`, which means `WhyCancel` is not fully realised; it still requires some type to produce the final (concrete, realised) type. In the second case, we get `Type`, which means it has been fully realised and we are at a final, concrete type.
 
 We can, of course, create a type alias for it:
 
@@ -110,3 +110,38 @@ We can, of course, create a type alias for it:
 > :kind T
 Type
 ```
+
+## More examples
+
+```purs
+data Thing
+  = Foo
+  | Bar
+  | Sth String
+
+sth :: Thing
+sth = Sth "Takes a String"
+```
+
+`Thing` is the data type, and `Foo`, `Bar` and `Sth` are data constructors. The data constructor `Sth` takes `String`. Now, consider this:
+
+```purs
+type Jedi = { id :: Int, name :: String }
+
+data Thing a
+  = Foo
+  | Bar
+  | Sth a
+
+sthStr :: Thing String
+sthStr = Sth "a string"
+
+sthInt :: Thing Int
+sthInt = Sth 1
+
+sthJedi :: Thing Jedi
+sthJedi = Sth { id: 1, name: "Ahsoka Tano" }
+```
+
+By making `Thing` take a *polymorphic type variable*, we can construct data of different types.
+
