@@ -1,5 +1,5 @@
 ---
-title: tar command line examples
+title: $ tar Command Line Examples
 description: Some practical examples on using the tar command to create and extract archives
 ---
 
