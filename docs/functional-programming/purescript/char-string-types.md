@@ -9,7 +9,7 @@ description: Learn about PureScript Char and String types, their use and some us
 
 The `Char` type is written in single quotes. We can also use Unicode code points in hexadecimal to create a char. Note the `\x...` escape sequence.
 
-```purs
+```haskell
 charZ :: Char
 charZ = 'Z'
 
@@ -24,7 +24,7 @@ The `String` type is written with double quotes.
 
 Unlike in some other languages, line continuation requires not one escape, but two.
 
-```purs
+```haskell
 hello :: String
 hello = "Hello, world!"
 
@@ -34,7 +34,7 @@ withNl = "Contains a\nnewline."
 
 Multi-line:
 
-```purs
+```haskell
 multi :: String
 multi = "This string\
         \ spawns over\

@@ -7,7 +7,7 @@ description: Let's scrutinize the creation and use of Data Types in PureScript a
 
 To create a new Data Type we use the `data` keyword:
 
-```purs
+```haskell
 data Foo = Foo
 
 x :: Foo
@@ -26,7 +26,7 @@ If some type can be either one or the other, but not both, it is a *coproduct* (
 
 The “hello world” of data types is defining our own version of true and false:
 
-```purs
+```haskell
 data Bool = T | F
 
 f :: Bool
@@ -40,7 +40,7 @@ t = T
 
 A given `v :: Bool` can be either `F` **or** `T` but not both at the same time. In Set Theory, a *union* is an *OR* operation, generally denoted by `|` or `||` in programming languages.
 
-```purs
+```haskell
 data ReasonToCancel
   = TooManyEmails
   | NotInterested
@@ -52,7 +52,7 @@ answer = Other "I don't like email adds..."
 
 The data constructor `Other` in `ReasonToCancel` data type is actually a function which implies:
 
-```purs
+```haskell
 Other :: String -> ReasonToCancel
 ```
 
@@ -63,7 +63,7 @@ That is, the “function” `Other` is a function from `String` to `ReasonToCanc
 
 We can make the `Other` data constructor take a type we don't know yet, instead of hard-coding it as `String`:
 
-```purs
+```haskell
 data WhyCancel a -- <1>
   = TooManyEmails
   | NotInterested
@@ -91,7 +91,7 @@ As explained in the book Haskell From First Principles
 
 In other words, *kinds* are types of types. Try this in the REPL:
 
-```purs-repl
+```haskell-repl
 > import WhyCancel
 
 > :kind WhyCancel
@@ -105,7 +105,7 @@ In the first case, we get `Type -> Type`, which means `WhyCancel` is not fully r
 
 We can, of course, create a type alias for it:
 
-```purs-repl
+```haskell-repl
 > type T = WhyCancel String
 > :kind T
 Type
@@ -113,7 +113,7 @@ Type
 
 ## More examples
 
-```purs
+```haskell
 data Thing
   = Foo
   | Bar
@@ -125,7 +125,7 @@ sth = Sth "Takes a String"
 
 `Thing` is the data type, and `Foo`, `Bar` and `Sth` are data constructors. The data constructor `Sth` takes `String`. Now, consider this:
 
-```purs
+```haskell
 type Jedi = { id :: Int, name :: String }
 
 data Thing a

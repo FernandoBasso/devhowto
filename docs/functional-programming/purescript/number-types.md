@@ -9,7 +9,7 @@ description: Learn about PureScript number types, their use and some useful tips
 
 Numbers can be of type `Number` and `Int`. Both are represented as normal JavaScript numbers at runtime. `Int`, however, has operations defined differently so that we always get integer results:
 
-```purs
+```haskell
 > div 7 2
 3
 
@@ -25,7 +25,7 @@ Numbers can be of type `Number` and `Int`. Both are represented as normal JavaSc
 
 Note how `div 7 2` results in 3, rather than 3.5. A number *without* a decimal is always considered an `Int`, while a number *with* a decimal is always considered a `Number`. Exponential notation always means the type is `Number`:
 
-```purs
+```haskell
 > 1
 1
 
@@ -65,7 +65,7 @@ export const intSub = function (x) {
 
 As we saw, 1 is `Int`, while `1.0` or `1e0` is `Number`. We cannot force a value like `1` to be `Number` simply by adding a type annotation like in Haskell.
 
-```purs
+```haskell
 n :: Number
 n = 1
 ```
