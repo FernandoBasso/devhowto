@@ -7,9 +7,9 @@ The book was written with PureScript 0.14 in mind, but I'm studying it with as o
 
 ## Studying the book
 
-Create directories like `ch01`, `ch02`, etc. and run `spago init` inside each directory. Make simple module names like `DataTypes1.purs` or `SumType.purs` with examples.
+Create directories like `ch01`, `ch02`, etc. and run `spago init` inside each directory. Make simple module names like `DataTypes1.purs` or `SumType.purs` with examples. Do NOT bother trying to keep them numbered with chapter, section, subsection, etc.
 
-Sometimes, the books shows code I don't yet know how to fully implement in this language, like `StringStats` with its `vowelCount` function in 3.1.3. The idea as that we go back and forth in the book as it makes sense.
+Sometimes, the books show code I don't yet know how to fully implement in this language, like `StringStats` with its `vowelCount` function in 3.1.3. The idea as that we go back and forth in the book as it makes sense. We should try our best to understand things at the moment we are studying them, but no learning is without gaps anyway. We MUST come back and fill the gaps, understand better and get new insights later on. As base knowledge helps to gain future knowledge, future knowledge also helps one to better re-learn things learned in the past. You look into past experiences with new eyes, new mindset, more context, etc.
 
 When I studied music, books would say things like “do not move forward until you mastered this scaled 100%.” It is humanly impossible to try that kind of approach. We would be stuck forever practicing one thing only and never truly, really *master* it (achiever perfection). It is better to get going with something, then move forward, then come back and fill the gaps, improve, perfect.
 
