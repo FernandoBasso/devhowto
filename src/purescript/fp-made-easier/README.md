@@ -13,3 +13,11 @@ Sometimes, the books show code I don't yet know how to fully implement in this l
 
 When I studied music, books would say things like “do not move forward until you mastered this scaled 100%.” It is humanly impossible to try that kind of approach. We would be stuck forever practicing one thing only and never truly, really *master* it (achiever perfection). It is better to get going with something, then move forward, then come back and fill the gaps, improve, perfect.
 
+## [n]vim, CoC
+
+```
+$ cd ch03
+$ nvm install < .nvmrc
+$ npm install
+$ npm install --global purescript-language-server
+```

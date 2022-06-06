@@ -1,0 +1,60 @@
+ch03 [drafts *|u+1]
+$ nvm use --lts
+Now using node v16.15.0 (npm v8.5.5)
+
+ch03 [drafts *|u+1]
+$ npm install --save-dev spago
+npm ERR! code EBADENGINE
+npm ERR! engine Unsupported engine
+npm ERR! engine Not compatible with your version of node/npm: typescript@0.0.1
+npm ERR! notsup Not compatible with your version of node/npm: typescript@0.0.1
+npm ERR! notsup Required: {"node":"16.13","npm":"8.3"}
+npm ERR! notsup Actual:   {"npm":"8.5.5","node":"v16.15.0"}
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/fernando/.npm/_logs/2022-06-05T13_34_19_465Z-debug-0.log
+
+ch03 [drafts *|u+1]
+$ echo 16.13 > .nvmrc
+
+ch03 [drafts *%|u+1]
+$ npm install < .nvmrc
+npm ERR! code EBADENGINE
+npm ERR! engine Unsupported engine
+npm ERR! engine Not compatible with your version of node/npm: typescript@0.0.1
+npm ERR! notsup Not compatible with your version of node/npm: typescript@0.0.1
+npm ERR! notsup Required: {"node":"16.13","npm":"8.3"}
+npm ERR! notsup Actual:   {"npm":"8.5.5","node":"v16.15.0"}
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/fernando/.npm/_logs/2022-06-05T13_36_15_523Z-debug-0.log
+
+ch03 [drafts *%|u+1]
+$ nvm install < .nvmrc
+Found '/home/fernando/work/src/projects/devhowto/src/purescript/fp-made-easier/ch03/.nvmrc' with version <16.13>
+Downloading and installing node v16.13.2...
+Downloading https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.xz...
+######################################################################## 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v16.13.2 (npm v8.1.2)
+
+ch03 [drafts *%|u+1]
+$ npm install --global npm@8.3
+
+removed 8 packages, changed 41 packages, and audited 215 packages in 4s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+2 vulnerabilities (1 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues, run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+ch03 [drafts *%|u+1]
