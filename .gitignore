@@ -20,6 +20,11 @@ src/exercism/typescript/**/*.md
 #
 *.xopp~
 
+##
+# PureScript Language Server Stuff.
+#
+.psc-ide-port
+
 #
 # vim: set textwidth=72:
 #
