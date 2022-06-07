@@ -13,11 +13,26 @@ Sometimes, the books show code I don't yet know how to fully implement in this l
 
 When I studied music, books would say things like “do not move forward until you mastered this scaled 100%.” It is humanly impossible to try that kind of approach. We would be stuck forever practicing one thing only and never truly, really *master* it (achiever perfection). It is better to get going with something, then move forward, then come back and fill the gaps, improve, perfect.
 
-## [n]vim, CoC
+## spago, purescript, purs-tidy
 
-```
-$ cd ch03
+Install node and PureScript packages:
+
+```shell-session
 $ nvm install < .nvmrc
 $ npm install
+```
+
+Then to open a REPL, build or run:
+
+```shell-session
+$ npx spago repl
+$ npx spago build
+$ npx spago run
+```
+
+## [n]vim, CoC
+
+```shell-session
+$ cd ch03
 $ npm install --global purescript-language-server
 ```
