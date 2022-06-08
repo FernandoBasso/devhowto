@@ -1,5 +1,9 @@
 # DevHowTo
 
+* [Commit Messages](#commit-messages)
+  * [Specific commit type and scopes](#specific-commit-type-and-scopes)
+    * [Functional Programming Made Easier](#functional-programming-made-easier)
+
 A place where a write notes, explanations, solutions on books and coding
 challenges, command line, shell script and text editors.
 
@@ -8,13 +12,13 @@ Check the public website at:
 https://fernandobasso.gitlab.io/devhowto/
 
 
-# Commit Messages
+## Commit Messages
 
 Let us try to follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec.
 
-## Specific commit type and scopes
+### Specific commit type and scopes
 
-### Functional Programming Made Easier
+#### Functional Programming Made Easier
 
 - Commit type: `purs`;
 - Commit scope: `FPME, chN`;
