@@ -13,6 +13,16 @@ Sometimes, the books show code I don't yet know how to fully implement in this l
 
 When I studied music, books would say things like “do not move forward until you mastered this scaled 100%.” It is humanly impossible to try that kind of approach. We would be stuck forever practicing one thing only and never truly, really *master* it (achiever perfection). It is better to get going with something, then move forward, then come back and fill the gaps, improve, perfect.
 
+**NORM**: If I fail to implement some example from the book because of lack of knowledge, add a comment AT THE TOP of the module with this content:
+
+```
+--
+-- @TODO @FIXME, page <page number>
+--
+```
+
+It is then easier later on to search for those and keep trying as we acquire further knolwedge.
+
 ## spago, purescript, purs-tidy
 
 Install node and PureScript packages:
