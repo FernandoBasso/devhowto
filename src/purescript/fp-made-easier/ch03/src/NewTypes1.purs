@@ -10,4 +10,3 @@ quigon = fullName "Qui" "Gon" "Jinn"
 
 ahsoka :: String
 ahsoka = fullName "Ahsoka" "" "Tano"
-
