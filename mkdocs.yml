@@ -63,6 +63,7 @@ nav:
 
     - TypeScript:
       - programming-languages/typescript/index.md
+      - Union Types: programming-languages/typescript/union-types.md
       - Functions: programming-languages/typescript/functions.md
       - Ted Navard Advanced TypeScript (video notes):
         - Intro: programming-languages/typescript/ted-neward-advanced-typescript/00-intro.md
