@@ -92,6 +92,9 @@ nav:
         - Number Types: functional-programming/purescript/types/number-types.md
         - Char and String Types: functional-programming/purescript/types/char-string-types.md
       - Functions: functional-programming/purescript/functions.md
+      - Functions Explained:
+          - functional-programming/purescript/functions-explained/index.md
+          - const: functional-programming/purescript/functions-explained/const.md
 
   - Algorithms and Data Structures:
 
