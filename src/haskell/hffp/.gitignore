@@ -1,0 +1,6 @@
+#
+# .gitignore
+#
+
+dev.hs
+.DS_Store

@@ -1,0 +1,818 @@
+{
+    "__type__": "Deck",
+    "children": [],
+    "crowdanki_uuid": "61900fbc-3d23-11ea-ad83-abf72a9860b6",
+    "deck_config_uuid": "61900fbd-3d23-11ea-ad83-abf72a9860b6",
+    "deck_configurations": [
+        {
+            "__type__": "DeckConfig",
+            "autoplay": true,
+            "crowdanki_uuid": "61900fbd-3d23-11ea-ad83-abf72a9860b6",
+            "dyn": false,
+            "lapse": {
+                "delays": [
+                    10
+                ],
+                "leechAction": 0,
+                "leechFails": 8,
+                "minInt": 1,
+                "mult": 0
+            },
+            "maxTaken": 60,
+            "name": "Default",
+            "new": {
+                "bury": false,
+                "delays": [
+                    1,
+                    10
+                ],
+                "initialFactor": 2500,
+                "ints": [
+                    1,
+                    4,
+                    7
+                ],
+                "order": 1,
+                "perDay": 20,
+                "separate": true
+            },
+            "replayq": true,
+            "rev": {
+                "bury": false,
+                "ease4": 1.3,
+                "fuzz": 0.05,
+                "hardFactor": 1.2,
+                "ivlFct": 1,
+                "maxIvl": 36500,
+                "minSpace": 1,
+                "perDay": 200
+            },
+            "timer": 0
+        }
+    ],
+    "desc": "",
+    "dyn": 0,
+    "extendNew": 10,
+    "extendRev": 50,
+    "media_files": [],
+    "mid": "1579700641798",
+    "name": "Haskell",
+    "note_models": [
+        {
+            "__type__": "NoteModel",
+            "crowdanki_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "css": ".card {\n font-family: 'Source Code Variable', 'Ubuntu Mono', monospace;\n font-size: 20px;\n text-align: left;\n color: black;\n background-color: white;\n}\n",
+            "flds": [
+                {
+                    "font": "Source Code Variable",
+                    "media": [],
+                    "name": "Front",
+                    "ord": 0,
+                    "rtl": false,
+                    "size": 18,
+                    "sticky": false
+                },
+                {
+                    "font": "Source Code Variable",
+                    "media": [],
+                    "name": "Back",
+                    "ord": 1,
+                    "rtl": false,
+                    "size": 18,
+                    "sticky": false
+                }
+            ],
+            "latexPost": "\\end{document}",
+            "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+            "name": "Basic",
+            "req": [
+                [
+                    0,
+                    "any",
+                    [
+                        0
+                    ]
+                ]
+            ],
+            "sortf": 0,
+            "tags": [
+                "ch02"
+            ],
+            "tmpls": [
+                {
+                    "afmt": "{{FrontSide}}\n\n<hr id=answer>\n\n{{Back}}",
+                    "bafmt": "",
+                    "bqfmt": "",
+                    "did": null,
+                    "name": "Card 1",
+                    "ord": 0,
+                    "qfmt": "{{Front}}"
+                }
+            ],
+            "type": 0,
+            "vers": []
+        },
+        {
+            "__type__": "NoteModel",
+            "crowdanki_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "css": ".card {\n font-family: 'Source Code Variable', 'Ubuntu Mono', monospace;\n font-size: 20px;\n text-align: left;\n color: black;\n background-color: white;\n}\n\n.cloze {\n font-weight: normal;\n color: blue;\n}\n.nightMode .cloze {\n color: lightblue;\n}",
+            "flds": [
+                {
+                    "font": "Source Code Variable",
+                    "media": [],
+                    "name": "Text",
+                    "ord": 0,
+                    "rtl": false,
+                    "size": 18,
+                    "sticky": false
+                }
+            ],
+            "latexPost": "\\end{document}",
+            "latexPre": "\\documentclass[12pt]{article}\n\\special{papersize=3in,5in}\n\\usepackage[utf8]{inputenc}\n\\usepackage{amssymb,amsmath}\n\\pagestyle{empty}\n\\setlength{\\parindent}{0in}\n\\begin{document}\n",
+            "name": "Cloze",
+            "req": [
+                [
+                    0,
+                    "any",
+                    [
+                        0
+                    ]
+                ]
+            ],
+            "sortf": 0,
+            "tags": [
+                "ch02",
+                "numbers"
+            ],
+            "tmpls": [
+                {
+                    "afmt": "{{cloze:Text}}",
+                    "bafmt": "",
+                    "bqfmt": "",
+                    "did": null,
+                    "name": "Cloze",
+                    "ord": 0,
+                    "qfmt": "{{cloze:Text}}"
+                }
+            ],
+            "type": 1,
+            "vers": []
+        }
+    ],
+    "notes": [
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "When is an expression in normal form?",
+                "It is when it cannot be further reduced. It has reached its irreducible form, a.k.a. canonical/normal form."
+            ],
+            "flags": 0,
+            "guid": "If>rc5:u-X",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is the expression `(+) 1 1` in normal form? Explain.",
+                "No, it is not, because it can be reduced further. When it reaches 2, then it will be in normal form."
+            ],
+            "flags": 0,
+            "guid": "d=Nr:]:7;S",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Set the GHCi prompt to `λ&gt; `.",
+                "```ghci<div>:set prompt \"λ&gt; \"</div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "cQ{~%8{1I/",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "After you load a module with `:load hello.hs`, how to return GHCi to the default Prelude module?",
+                "`:module`"
+            ],
+            "flags": 0,
+            "guid": "d6LqJ<B!yP",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "ghci"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Reducible expressions are also called {{c1::redexes}}."
+            ],
+            "flags": 0,
+            "guid": "rPI=G%8k<3",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Are functions considered expressions in Haskell?",
+                "Yes. They are a special type of expression. They are expressions that can be applied to other expressions/values."
+            ],
+            "flags": 0,
+            "guid": "IVaxX{)5g_",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Can we apply a function to multiple arguments?",
+                "Yes and no.<br><br>Syntactically, it looks like we can do that, but in reallity, we apply a function to one single argument, which returns a function that awaits for another single argument, and so on, until the there are no more arguments to be consumed, in which case the final result is produced.<div><br></div><div>Techinically, we cannot, but in practice, because of syntactic facilities, it is the same thing as if we could.</div><div><br></div><div>`add 1 1` in Haskell produces 2, the same as `add(1, 1)` in Javascript or Ruby would. So, for practical purposes, we can say things like \"this function takes two arguments\". We just have to keep in mind that behind the scenes some magic happens.&nbsp;</div>"
+            ],
+            "flags": 0,
+            "guid": "gYYnEA{sp*",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Can function and variable identifiers start with an uppercase letter?&nbsp;",
+                "No, capitalized identifiers are used for defining type and data constructors, module names, (among other things), and they _cannot_ be used for starting variable and function names."
+            ],
+            "flags": 0,
+            "guid": "CBPZ7fx014",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "When we talk about evaluating an expression, we’re talking about {{c1::reducing the terms}} until the expression reaches its {{c1::simplest}} form.&nbsp; Once a term has reached its simplest form, we say that it is {{c2::irreducible}} or finished evaluating. Usually, we call this a {{c3::value}}.<br>"
+            ],
+            "flags": 0,
+            "guid": "Ar<&35fVZs",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "As in the lambda calculus, application is&nbsp;{{c1::evaluation}}: applying a function to an argument allows evaluation, a.k.a. {{c1::reduction}}."
+            ],
+            "flags": 0,
+            "guid": "jEN)H+9E91",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Are values expressiosn? Can they be reduced further?",
+                "Yes, values are expressions. 1 is an expression, for example. Values are expressions that have reached their irreducible form, also known as normal/canonical form."
+            ],
+            "flags": 0,
+            "guid": "o>g|uX0DeK",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "We have the function `f x = x`. Is the application `f 1` reducible?",
+                "Yes, it is an expression involving a function and a value (two expressions themselves) which can be further reduced to the final, irreducible value, a.k.a. canonical or normal form."
+            ],
+            "flags": 0,
+            "guid": "pi{y^dz;0o",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Haskell does not evaluate everything to canonical/normal form by default. It only evaulates to Weak Head Normal Form (WHNF) by default. What does this mean?",
+                "It means that not everything will be evaluated to its irreducible form immediately. That is why expressions like this do not run infinitely until the end of time:<div><br></div><div>```ghci</div><div>λ&gt; take 0 [1..]<br></div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "N%-SC~9NUf",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "While prefix is the default syntax for functions in haskell, there are a group of {{c1::operators}} that are {{c1::infix}} by default."
+            ],
+            "flags": 0,
+            "guid": "Ax1u:^(COG",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Operators are {{c1::functions}} that can be used in infix style. All operators are {{c1::functions}}; not all functions are {{c1::operators}}."
+            ],
+            "flags": 0,
+            "guid": "mAGue_n&!Z",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How to make an infix function like `div` work as infix?",
+                "By enclosing it in backticks:<div><br></div><div>```ghci</div><div>λ&gt; div 10 2\n<br>5\n<br>λ&gt; 10 `div` 2\n<br>5<br></div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "MQ_D*]E!ET",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How can we make a prefix function like `+` work in prefix position?",
+                "By enclosing the operator function in parenthses:<div><br></div><div>```ghci</div><div>λ&gt; 1 + 1\n<br>2\n<br>λ&gt; (+) 1 1\n<br>2<br></div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "x5Qvt<!%!t",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "If the function name is alphanumeric, it is a {{c1::prefix}} function by default, and not all prefix functions can be made {{c1::infix}} by using backticks. If the name is a symbol, it is {{c2::infix}} by default but can be made prefix by wrapping it in {{c2::parentheses}}.<br>"
+            ],
+            "flags": 0,
+            "guid": "mm(/Gic={C",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How can we query GHCi for the associativity and precedence of functions and operator functions?",
+                "By using `:info`:<br><br>```ghci<div>λ&gt; :info div<br></div><div>λ&gt; :info (+)<br></div><div>```</div><div><br></div><div>NOTE: It looks like recent versions of GHCi allows querying information on function operators even without parenthesis, like `:info +`. `:type` on function operators do require parentheses.<br></div>"
+            ],
+            "flags": 0,
+            "guid": "x2z8$e()+5",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "`:info (+)` shows, among other things, the information \"infixl 6 +\". Explain.",
+                "- `infixl` means it is an infix function, left associative.<div>- `6` the precedence, 0 the lowest precedence, 9 the highest.</div><div>- `+` is the name of the function.</div>"
+            ],
+            "flags": 0,
+            "guid": "c:1A+JrM4b",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is difference in associativity and precedence if you compare `:info` on `*` and `^`?",
+                "`*` is infixl, precedence 7, and `^` is infixr, precedence 8."
+            ],
+            "flags": 0,
+            "guid": "sEXc`OIZF>",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is `2 ^ 3 ^ 4` the same as `2 ^ (3 ^ 4)`? Explain.",
+                "No difference. Since `^` is infixr, it already associates from the right, so, adding parentheses on the right changes nothing.<div><br></div><div><div>```</div><div>2 ^ 3 ^ 4</div><div>2 ^ 81</div><div>2417851639229258349412352</div><div>```</div></div>"
+            ],
+            "flags": 0,
+            "guid": ";sI$j0[{d",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is `2 ^ 3 ^ 4` the same as `(2 ^ 3) ^ 4`? Explain.",
+                "Yes, it is different.<div><br></div><div>Since `^` is infixr, meaning it is right-associative, adding parentheses on the left changes the precedence.</div><div><br></div><div>```</div><div>(2 ^ 3) ^ 4</div><div>&nbsp; &nbsp; &nbsp;8&nbsp; ^ 4</div><div>&nbsp; &nbsp; &nbsp; &nbsp;4096</div><div>```</div><div><br></div><div>which is different than</div><div><br></div><div>```</div><div>2 ^ 3 ^ 4</div><div>2 ^ 81</div><div>18446744073709551616<br></div><div>```</div><div><br></div>"
+            ],
+            "flags": 0,
+            "guid": "u.T*MduDr>",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Can we remove the parentheses in the expression `2 ^ (3 ^ 4)` and still get the same result? Explain.",
+                "Parentheses are being used in a way that does not change the default order of evaluation that `^` already produces by default.<div><br></div><div><br></div><div>`^` is right-associative, so, parenthesizing the right sub-expression changes nothing.</div>"
+            ],
+            "flags": 0,
+            "guid": "zMU[#ze,,%",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Can we use a variable or function in a source file before it was defined? That is, use a function on line 1, and define it on line 2?",
+                "Yes, we can. GHCi loads the entire file before actually executing the code, so, it knwos all the values that have been defined before runtime.<div><br></div><div>TODO: I think I read somewhere Haskell uses something called \"two-pass compilation\".</div>"
+            ],
+            "flags": 0,
+            "guid": "JOHey<cVG?",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why does `div 10 3` returns 3, droping the decimal .3333?",
+                "Because `div` is for integral division. For fractional division, use `/`."
+            ],
+            "flags": 0,
+            "guid": "l|25OcY+o[",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "`(/) 10 6` is 1.66, which means it is closest to 2 than to 1. However, `div 10 6` is 1, not 2. That is because `div` always...",
+                "...rounds down. It does not round based on the .5 thing like many rounding functions in languages do."
+            ],
+            "flags": 0,
+            "guid": "Er:[YE@;WO",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "`(/) 10 (-3)` is -3.333, which means it is closest to -3 than to -4. However, `div 10 (-3)` is -4, not -3. That is because `div` always...",
+                "...rounds down. It does not round based on the .5 thing like many rounding functions in languages do.\n<br> <br>Down here is going further to the left, to the negative numbers."
+            ],
+            "flags": 0,
+            "guid": "CO=yHpO^3Z",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What does `mod` do?",
+                "It produces the remainder of a modular division."
+            ],
+            "flags": 0,
+            "guid": "hrJ)^W{b6u",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why do both `rem 2 4` and `mod 2 4` produce 2 instead of 0.5?",
+                "Because `rem` and `mod` only do integral division. The quotient is 0 and the remainder is 2."
+            ],
+            "flags": 0,
+            "guid": "C.zLg{LW-W",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "In haskell, the result `mod` will have the same sign of the {{c1::divisor}}, and the reesult of `rem` will have the same sign as the {{c1::dividend}}."
+            ],
+            "flags": 0,
+            "guid": "shFe_dn6/.",
+            "newlyAdded": false,
+            "note_model_uuid": "48c9bad6-3d34-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is `mod 3 (-2)` 1 or -1? Explain.",
+                "It is -1 because the result of `mod` always keep the sign of the divisor."
+            ],
+            "flags": 0,
+            "guid": "hlL-4pR}4u",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is the result of `mod (-3) 2` 1 or -1? Explain.",
+                "It is 1 because the result of `mod` always keeps the sign of the divisor."
+            ],
+            "flags": 0,
+            "guid": "M@[A;%7x?M",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is the result of `rem 3 (-2)` 1 or -1? Explain.",
+                "It is 1 because the result of `rem` always keep the sign of the dividend."
+            ],
+            "flags": 0,
+            "guid": "t:3iyB#brE",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is the result of `rem (-3) 2` 1 or -1? Explain.",
+                "It is -1 because the result of `rem` always keep the sign of the dividend."
+            ],
+            "flags": 0,
+            "guid": "b+nUjc5$rN",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why doesn't `1 + -2` add 1 to -2 and instead produces an error? Fix it.",
+                "Because both `+` and `-` are \"infixl 6\", so, GHCi thinks we want to add and subtract, not knowing how to resolve the precedence.<div><br></div><div>Fix: `1 + (-2)` or `1 + (negate 2)`.</div><div><br></div><div>NOTE: There are places where just writing `-1` is okay, for example, `num = -1`. This would work too:</div><div><br></div><div>```</div><div>(+) 1 $ -2</div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "N~oS?N)iFD",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "The `-` operator (function) has two possible meanings. Explain.",
+                "It can either subtract, as in `(-) 1 1`, or to negate, as in `-1`, which is the same as `(negate 1)`.<br><br>Note that a space after `-` as in `- 1` still means negation (if it is not in between two operands. `1 - 1` is subtraction).<div><br></div><div>Also note that it is negation of the numeric sign, not negation as in booleans.</div>"
+            ],
+            "flags": 0,
+            "guid": "Aljwa~fs}u",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "What is the result of `print 1 + 1`? Explain.",
+                "It is an error. `:type print` tells it takes one argument. Therefore, `print` takes the `1` as the argument, and the `+ 1` part is becomes nonsense to GHCi.<div><br></div><div>The fix is to first evaluate `1 + 1` and then pass it, a single result/argument to `print`:</div><div><br></div><div>```ghci</div><div>print (1 + 1)</div><div>print $ 1 + 1</div><div>```</div>"
+            ],
+            "flags": 0,
+            "guid": "ptLyF(<S>z",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "How to use `$` to avoid all the parentheses in `putStrLn (show (1 + 1))`?",
+                "`putStrLn $ show $ 1 +`"
+            ],
+            "flags": 0,
+            "guid": "eFP!Jb&CJ?",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "numbers"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "```haskell<div>putStrLn (show (1 + 1))<br><br>putStrLn (show $ 1 + 1)<br><br>putStrLn $ show (1 + 1)<br><br>putStrLn $ show $ 1 + 1<br></div><div>```</div><div><br></div><div>Do all of the above eval to the same thing?</div>",
+                "Yes, they do. All of those variants are different syntaxes to express the same thing, and produce the same result."
+            ],
+            "flags": 0,
+            "guid": "x=(K.c&RnT",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02",
+                "precedence"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why do neither work?<div><br></div><div>```</div><div>2 * 2 $ ^ 2</div><div>2 * 2 $ (^2)</div><div>```</div>",
+                "Basically, `$` needs a function on the left, and params on the right. `2 * 2` is 4, and you can't apply 4 to either `^ 2` or `(^2)`.<div><br></div><div>If you do `:info $`, you'll see that `$` takes a function as the first argument, and it is infixr. `2 * 2` is not a function, because it is 4, and you can't do `4 $ &lt;something&gt;`.</div>"
+            ],
+            "flags": 0,
+            "guid": "sj}-fiY-%5",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Is `(2 ^ 3) ^ 4` the same as `(2^) 3 ^ 4`. Explain.",
+                "Yes, the same thing.<div><br></div><div>In the first case, first reduce `2 ^ 3` and then `^ 4^.</div><div><br></div><div>In the second case, partially apply `2 ^`, sectioning it to the right, meaning it will be `2 ^ 3` (not `3 ^ 2`), then then `^ 4`.</div>"
+            ],
+            "flags": 0,
+            "guid": "q_a{UOfNVC",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        },
+        {
+            "__type__": "Note",
+            "data": "",
+            "fields": [
+                "Why does `(-1) 2` produce an error instead of being a case of sectioning, like `(+1) 2`, for instance?",
+                "Because enclosing a value in parens with the `-` before the value is indicates to GHCi that we want to apply the negation function `-` to an argument. In this case, it is not treated as subtraction, but as negation. So, negating 1 produces `-1`, and `-1` is not a function that can be applied to 2.<div><br></div><div>Use `(subtract 1) 2` to create the sectioning. Also, `(1-) 2` is fine because `-` is on the right side, where it can't possibly be treated as negation, so GHCi understands it means subtraction.</div>"
+            ],
+            "flags": 0,
+            "guid": "Cg~akcgy~.",
+            "newlyAdded": false,
+            "note_model_uuid": "61900fc0-3d23-11ea-ad83-abf72a9860b6",
+            "tags": [
+                "ch02"
+            ]
+        }
+    ]
+}

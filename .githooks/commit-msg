@@ -23,7 +23,7 @@ commit_types=(
 	exercism
 	fix
 	git
-	haskell
+	hs
 	htdp
 	kitty
 	macos
