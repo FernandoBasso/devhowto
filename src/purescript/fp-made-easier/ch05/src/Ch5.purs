@@ -1,6 +1,6 @@
 module Ch5 where
 
-import Prelude (Unit, show)
+import Prelude (Unit, show, ($))
 import Effect (Effect)
 import Effect.Console (log)
 
@@ -20,6 +20,8 @@ infixr 0 apply as $
 
 test :: Effect Unit
 test = do
+  --
   -- log (show (flip const 1 2))
+  --
   log $ show $ flip const 1 2
 
