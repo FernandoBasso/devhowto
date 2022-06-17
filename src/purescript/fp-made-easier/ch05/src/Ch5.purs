@@ -10,7 +10,16 @@ flip f x y = f y x
 const :: ∀ a b. a -> b -> a
 const x _ = x
 
+apply :: ∀ a b. (a -> b) -> a -> b
+apply f x = f x
+
+--
+-- Zero is the lowest precedence.
+--
+infixr 0 apply as $
+
 test :: Effect Unit
 test = do
-  log (show (flip const 1 2))
+  -- log (show (flip const 1 2))
+  log $ show $ flip const 1 2
 
