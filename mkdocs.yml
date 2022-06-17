@@ -87,6 +87,7 @@ nav:
     - PureScript:
       - Intro: functional-programming/purescript/intro.md
       - REPL: functional-programming/purescript/repl.md
+      - Type Signatures: functional-programming/purescript/type-signatures.md
       - Types:
         - functional-programming/purescript/types/index.md
         - Data Types: functional-programming/purescript/types/data-types.md
