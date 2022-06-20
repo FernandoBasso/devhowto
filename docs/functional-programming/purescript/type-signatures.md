@@ -9,6 +9,18 @@ In the book Haskell From First Principles, there are lots of exercises about inf
 
 At first, we may be baffled and think “how can one possibly infer the implementation given only a type signature?“. Looks like an impossible task at first.
 
+## Fully Polymorphic, Unconstrained Types
+
+Consider the type signature of this function `f`:
+
+```haskell
+f :: a -> b
+```
+
+It takes an *a* and returns a *b*. Lowercase letters denote **fully polymorphic, unconstrained types**. It is the most polymorphic a type can get. It means a value could be of any type whatsoever.
+
+Also, `a -> b` means that *a* and *b* **can be different types**, not that they have to be different. *a* could be an integer, but *b* could also be an integer. In other words, and more concretely, `f :: a -> b` could mean `Int -> Int`, `Int -> String`, `String -> String`, `String -> Int`, `Foo -> Bar`, or any other possible combination of types.
+
 ## Example 1
 
 Consider this function (with simplified type signature):

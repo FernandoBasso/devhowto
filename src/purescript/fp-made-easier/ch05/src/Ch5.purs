@@ -1,6 +1,6 @@
 module Ch5 where
 
-import Prelude (Unit, show, ($))
+import Prelude (Unit, show)
 import Effect (Effect)
 import Effect.Console (log)
 
