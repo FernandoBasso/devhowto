@@ -46,6 +46,7 @@ project:
     - title: SQL
       children:
         - file: sql/sql-intro.md
+        - file: sql/basic-sql.md
 
     - title: Docker
       children:
