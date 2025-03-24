@@ -43,6 +43,9 @@ project:
         - file: git/revisions.md
         - file: git/bad-git-commit-messages.md
 
+    - title: Docker
+      children:
+        - file: docker/docker-intro.md
 site:
   template: book-theme
   options:
