@@ -45,8 +45,9 @@ project:
 
     - title: SQL
       children:
-        - file: sql/sql-intro.md
-        - file: sql/basic-sql.md
+        - file: dbsql/sql-intro.md
+        - file: dbsql/codewarsk-sql-8kyu.md
+        - file: dbsql/hackerrank-easy-sql-challenges.md
 
     - title: Docker
       children:

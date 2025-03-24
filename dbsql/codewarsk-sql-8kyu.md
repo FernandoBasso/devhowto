@@ -1,4 +1,4 @@
-# Basic SQL
+# Codewars 8 kyu SQL Challenges
 
 **NOTE**: Assume these examples are run on PostgreSQL >= 13 at least.
 As of 2022, I'm running these on Arch Linux with PostgreSQL 14.
