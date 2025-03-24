@@ -1,0 +1,51 @@
+version: 1
+project:
+  id: 6b63e5f6-50de-42ed-b55b-3e64838c1541
+  title: Dev How To
+  description: My notes, tips, examples and insights on software development in general.
+  keywords: [unix, cmdline, shell, bash, programming, devops]
+  authors: [Fernando Basso]
+  github: https://github.com/FernandoBasso/devhowto
+
+
+  toc:
+    - file: README.md
+
+    - title: Command Line
+      children:
+        - file: cmdline/intro-to-the-command-line.md
+        - file: cmdline/help-info-man.md
+        - file: cmdline/argument-syntax.md
+        - file: cmdline/built-in.md
+        - file: cmdline/echo-printf.md
+        - file: cmdline/bash-aliases.md
+        - file: cmdline/redirections.md
+        - file: cmdline/bash-arrays.md
+        - file: cmdline/bash-brace-expansion.md
+        - file: cmdline/bash-parameter-expansion.md
+        - file: cmdline/cp.md
+        - file: cmdline/du.md
+        - file: cmdline/find.md
+        - file: cmdline/grep.md
+        - file: cmdline/tar.md
+        - file: cmdline/file-conversion.md
+        - file: cmdline/hackerrank-shell.md
+
+    - title: Git
+      children:
+        - file: git/commit-messages.md
+        - file: git/more-git-commit-messages-examples.md
+        - file: git/bad-git-commit-messages.md
+        - file: git/branching.md
+        - file: git/merge.md
+        - file: git/reset.md
+        - file: git/branches-push-pull-merge-rebase.md
+        - file: git/revisions.md
+        - file: git/bad-git-commit-messages.md
+
+site:
+  template: book-theme
+  options:
+    favicon: __assets/favicon.webp
+    logo: __assets/site-logo.webp
+    logo_text: Dev How To

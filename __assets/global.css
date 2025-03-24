@@ -1,0 +1,88 @@
+/**
+ * Comments in italic hurt readability. Even comments use a lot of
+ * non-alphanumeric characters that look awkward in italic. Some
+ * fonts make it a little better, some worse, but still, italics
+ * and comments don't go well together.
+ *
+ * • .cm  → Multiline comments.
+ * • .c1  → Single line comments.
+ * • .cp  → Things like #include, #define MAX_LEN 42.
+ * • .cpf → Stuff after #include, like <stdio.h>.
+ */
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cpf {
+  font-style: normal;
+}
+
+.related-information {
+  display: inline-block;
+  padding: 1em;
+  border-top: 1px solid #ccc;
+}
+
+.related-information .copyright {
+  display: inline;
+}
+
+.related-information .divider {
+  display: inline;
+}
+
+@media (min-width: 960px) {
+  .related-information {
+    text-align: center;
+  }
+
+  .related-information .copyright {
+    display: block;
+  }
+
+  .related-information .divider {
+    display: none;
+  }
+}
+
+/**
+ * Looks like admonitions use a font size which is too small. Not sure.
+ * Let's try a larger font to some time and see how it feels.
+ */
+.admonition {
+  font-size: 0.96rem;
+}
+
+/*
+ * ============================================================================
+ * pygments.css overrides
+ * ======================
+ */
+
+ /**
+  * Code block background color. The original one seems too greyish. Let's
+  * make it a little less gray, nearer to white.
+  */
+.highlight {
+  background-color: #fafafa;
+}
+
+/**
+ * There is a selector `.highlight .go` which makes fonts italic.
+ * I never liked italics in source code... Not even in comments.
+ */
+.highlight .go {
+  font-style: normal;
+ }
+
+/**
+ * Code block font. The default ones were too small and not so readable
+ * as Source Code Pro, which we make the first in the list so it is used
+ * if available.
+ */
+.highlight code,
+.highlight pre,
+.highlight kbd,
+.highlight samp {
+  font-family: "Source Code Pro", SFMono-Regular, Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
+  font-size: 0.96em;
+}
