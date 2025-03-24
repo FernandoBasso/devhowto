@@ -43,6 +43,10 @@ project:
         - file: git/revisions.md
         - file: git/bad-git-commit-messages.md
 
+    - title: SQL
+      children:
+        - file: sql/sql-intro.md
+
     - title: Docker
       children:
         - file: docker/docker-intro.md
