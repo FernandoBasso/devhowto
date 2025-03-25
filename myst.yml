@@ -52,6 +52,11 @@ project:
     - title: Docker
       children:
         - file: docker/docker-intro.md
+
+    - title: Emacs
+      children:
+        - file: emacs/emacs-intro.md
+
 site:
   template: book-theme
   options:
