@@ -28,6 +28,7 @@ project:
         - file: cmdline/find.md
         - file: cmdline/grep.md
         - file: cmdline/tar.md
+        - file: cmdline/column.md
         - file: cmdline/file-conversion.md
         - file: cmdline/hackerrank-shell.md
 
