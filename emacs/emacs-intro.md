@@ -45,4 +45,4 @@ twb user says:
 - [The Amazing Sacha Chua's blog mostly about Emacs](https://sachachua.com/blog/)
 - [Martin Fowler on Mastodon post on Emacs](https://toot.thoughtworks.com/@mfowler/111817969324041521)
 - [Martin Fowler on Emacs completion](https://martinfowler.com/articles/2024-emacs-completion.html)
-
+- [Emacs fun acronyms on www.gnu.org](https://www.gnu.org/fun/jokes/gnuemacs.acro.exp.en.html)
