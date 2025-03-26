@@ -44,6 +44,10 @@ project:
         - file: git/revisions.md
         - file: git/bad-git-commit-messages.md
 
+    - title: Sed
+      children:
+        - file: sed/sed-fill-empty-csv-fields-with-space.md
+
     - title: SQL
       children:
         - file: dbsql/sql-intro.md
