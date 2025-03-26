@@ -8,6 +8,12 @@ description: Notes, tips, examples and ideas on using the column command.
 
 The unix `column` command line utility columnate lists and csv-style data.
 
+Note that the `column` utility is not part of the [POSIX specification](https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html).
+Among other things, it means different systems will support a different feature set.
+And as always, GNU command line utilities offer a superior experience.
+
+## Initial example
+
 For example, if the columns are separated with spaces (and tabs are also considered spaces by default):
 
 ```{code} bash
