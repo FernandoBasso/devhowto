@@ -8,7 +8,7 @@ Bash (and sure, other shells as well) can work with Unicode just fine.
 In this article, we'll explore some use cases and examples on the topic.
 
 :::{note} Set your bash PS1 prompt
-To follow along with this examples, set your bash PS1 prompt to this:
+To follow along with thise examples, set your bash PS1 prompt to this:
 
 ```bash
 PS1='$ '
@@ -70,6 +70,25 @@ $ echo -e '\ua0'
 
 The last one prints a newline.
 Check `man ascii` for some extra enlightenment.
+
+## printf
+
+`printf` is also a shell built-in.
+Sadly, `help printf` only briefly mentions escape sequences, but it does not include details on that.
+`man bash` also doesn't seem to document Unicode-related escape sequences either, unless it is in a place I missed looking at.
+
+In any case, following the TIAS (try and and see) plus some web searches does give us some practical answers.
+Basically, we can also use `\u` and `\U` with bash's `printf`:
+
+```{code} bash
+$ printf '\u03bb \u266d \u263a \u266d \u266a \u266b\n'
+λ ♭ ☺ ♭ ♪ ♫
+$ printf '\U0001f4a9 \U1f4a9\n'
+💩 💩
+```
+
+![bash printf unicode](../__assets/bash-printf-unicode.png)
+
 
 ## Final notes
 
