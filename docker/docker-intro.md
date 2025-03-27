@@ -31,7 +31,7 @@ services:
 One solution is to update the configuration for the container(s) in question.
 
 ```{code} bash
-$ docker container update --restart no <
+$ docker container update --restart no
 ```
 
 Of course, if we have `restart: always` in the `docker-compose.yml` file, it could be applied the next time that container is run depending on other things, like whether we run it with `--rm` or not.
