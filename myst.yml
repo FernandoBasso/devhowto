@@ -23,6 +23,7 @@ project:
         - file: cmdline/bash-arrays.md
         - file: cmdline/bash-brace-expansion.md
         - file: cmdline/bash-parameter-expansion.md
+        - file: cmdline/bash-and-unicode.md
         - file: cmdline/cp.md
         - file: cmdline/du.md
         - file: cmdline/find.md

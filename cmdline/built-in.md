@@ -4,7 +4,10 @@
 
 A built-in is a command provided by the shell itself, not a program stored somewhere in the path.
 
-Bash's man page uses the spelling *bultin*. Zsh man page seems to use a mix of *built-in* and *builtin*. The [POSIX spec for the Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14) seems to strictly use *built-in*. Let’s attempt consistently use POSIX spelling (**built-in**) throughout this website.
+Bash's man page uses the spelling *bultin*.
+Zsh man page seems to use a mix of *built-in* and *builtin*.
+The [POSIX spec for the Shell Command Language](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_14) seems to strictly use *built-in*.
+Let’s attempt to consistently use POSIX spelling (**built-in**) throughout this website.
 
 ## POSIX builtin reserved word
 
