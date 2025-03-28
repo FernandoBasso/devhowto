@@ -14,6 +14,7 @@ project:
     - title: Command Line
       children:
         - file: cmdline/intro-to-the-command-line.md
+        - file: cmdline/gnu-coreutils.md
         - file: cmdline/help-info-man.md
         - file: cmdline/argument-syntax.md
         - file: cmdline/built-in.md
