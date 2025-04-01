@@ -66,6 +66,10 @@ project:
       children:
         - file: emacs/emacs-intro.md
 
+    - title: Go
+      children:
+        - file: go/go-pub-sub-examples.md
+
 site:
   template: book-theme
   options:
