@@ -33,6 +33,7 @@ project:
         - file: cmdline/column.md
         - file: cmdline/file-conversion.md
         - file: cmdline/hackerrank-shell.md
+        - file: cmdline/clipboard-on-the-command-line.md
 
     - title: Git
       children:
