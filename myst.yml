@@ -71,6 +71,10 @@ project:
       children:
         - file: go/go-pub-sub-examples.md
 
+    - title: Miscellaneous
+      children:
+        - file: misc/newline.md
+
 site:
   template: book-theme
   options:
