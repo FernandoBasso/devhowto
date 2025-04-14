@@ -69,6 +69,7 @@ project:
 
     - title: Go
       children:
+        - file: go/go-generics.md
         - file: go/go-pub-sub-examples.md
 
     - title: Miscellaneous
