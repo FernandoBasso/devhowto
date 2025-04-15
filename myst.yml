@@ -50,6 +50,7 @@ project:
     - title: Sed
       children:
         - file: sed/sed-fill-empty-csv-fields-with-space.md
+        - file: sed/sed-insert-lines.md
 
     - title: SQL
       children:
