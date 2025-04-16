@@ -19,11 +19,22 @@ Besides reading the specs, also take a look at the sidebar about reading and und
 
 ## Single Unix Specification (SUS)
 
-- [XBD: Base Definitions](https://pubs.opengroup.org/onlinepubs/9699919799/idx/xbd.html)
-- [XSH: System Interfaces and XBD Headers](https://pubs.opengroup.org/onlinepubs/9699919799/idx/xsh.html)
-- [XCU: Shell and Utilities (Commands and Utilities)](https://pubs.opengroup.org/onlinepubs/9699919799/idx/xcu.html)
+The latest spec is from 2024:
 
-More info on the link [The Open Group Base Specifications Issue 7, 2018 edition](https://pubs.opengroup.org/onlinepubs/9699919799). There is also a question about the [difference between SUS and Open Group](https://unix.stackexchange.com/questions/14368/difference-between-posix-single-unix-specification-and-open-group-base-specifi/14369).
+- [The Open Group Base Specifications Issue 8 (2024)](https://pubs.opengroup.org/onlinepubs/9799919799.2024edition/mindex.html)
+
+Some definitions:
+
+XBD
+: Base Definitions
+
+XSH
+: System Interfaces and XBD Headers
+
+XCU
+: Shell and Utilities (Commands and Utilities)
+
+There is a question about the [difference between SUS and Open Group](https://unix.stackexchange.com/questions/14368/difference-between-posix-single-unix-specification-and-open-group-base-specifi/14369).
 
 ## Yes, That Website Sucks
 
