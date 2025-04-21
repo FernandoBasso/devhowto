@@ -7,7 +7,6 @@ project:
   authors: [Fernando Basso]
   github: https://github.com/FernandoBasso/devhowto
 
-
   toc:
     - file: README.md
 
@@ -59,6 +58,7 @@ project:
         - file: dbsql/sql-operations-on-column-data.md
         - file: dbsql/codewarsk-sql-8kyu.md
         - file: dbsql/hackerrank-easy-sql-challenges.md
+        - file: dbsql/postgresql-type-casting.md
 
     - title: Docker
       children:
