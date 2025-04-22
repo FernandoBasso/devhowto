@@ -59,6 +59,7 @@ project:
       children:
         - file: dbsql/sql-intro.md
         - file: dbsql/psql-cli.md
+        - file: dbsql/useful-postgresql-commands.md
         - file: dbsql/sql-operations-on-column-data.md
         - file: dbsql/codewarsk-sql-8kyu.md
         - file: dbsql/hackerrank-easy-sql-challenges.md
