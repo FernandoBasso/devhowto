@@ -2,7 +2,7 @@
 description: Some useful Awk examples of summing columns for different situations.
 ---
 
-# AWK to Sum Columns
+# Awk to Sum Columns
 
 ## Simple sum
 
