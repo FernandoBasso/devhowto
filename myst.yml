@@ -51,6 +51,10 @@ project:
         - file: sed/sed-fill-empty-csv-fields-with-space.md
         - file: sed/sed-insert-lines.md
 
+    - title: Awk
+      children:
+        - file: awk/awk-sum-columns.md
+
     - title: SQL
       children:
         - file: dbsql/sql-intro.md
