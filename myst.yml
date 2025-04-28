@@ -69,6 +69,7 @@ project:
       children:
         - file: docker/docker-intro.md
         - file: docker/docker-hello-v1-tutorial.md
+        - file: docker/docker-hello-v2-tutorial.md
 
     - title: Emacs
       children:
