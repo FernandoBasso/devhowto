@@ -71,11 +71,10 @@ $ docker run --rm hello-v1:latest
 Hello Debian on Docker 💯
 ```
 
-<dl><dt><strong>💡 TIP</strong></dt><dd>
-
+:::{tip}
 The `--rm` flag is useful when we want to avoid having a lot of stopped containers and anonymous volumes hanging around.
 It helps to keeps things cleaner.
-</dd></dl>
+:::
 
 If we want to update the message, it is necessary to build the image again so the next time it runs, it will print the new message.
 
@@ -102,10 +101,9 @@ $ echo $?
 2
 ```
 
-<dl><dt><strong>💡 TIP</strong></dt><dd>
-
+:::{tip}
 On UNIX-like and other operating systems, an exit status of 0 means _success_, and any other non-zero exit status means some sort of _failure_.
 Some tools and commands document the different exit status for non-success cases.
 Still, in most case, just knowing that 0 means success and non-zero means some sort of failure is enough for scripting, automation, reporting, etc.
-</dd></dl>
+:::
 
