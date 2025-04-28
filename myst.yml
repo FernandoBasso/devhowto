@@ -78,6 +78,10 @@ project:
         - file: go/go-generics.md
         - file: go/go-pub-sub-examples.md
 
+    - title: Lisp
+      children:
+        - file: lisp/lisp-exercises-1.md
+
     - title: Miscellaneous
       children:
         - file: misc/newline.md
