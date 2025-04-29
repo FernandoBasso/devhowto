@@ -24,6 +24,7 @@ project:
         - file: cmdline/bash-brace-expansion.md
         - file: cmdline/bash-parameter-expansion.md
         - file: cmdline/bash-and-unicode.md
+        - file: cmdline/bash-exercises-part-1.md
         - file: cmdline/cp.md
         - file: cmdline/du.md
         - file: cmdline/find.md
