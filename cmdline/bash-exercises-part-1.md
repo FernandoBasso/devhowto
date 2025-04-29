@@ -8,6 +8,8 @@ description: A collection of bash questions and exercises to practice and check 
 
 Intro!
 
-:::{include} exercises/bash-arrays.md
+:::{include} exercises/bash-array-append-1.md
 :::
 
+:::{include} exercises/bash-array-assign-index.md
+:::
