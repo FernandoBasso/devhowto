@@ -44,14 +44,3 @@ func main() {
 
 However, if we are striving to work in a functional functional style and treat data structures as immutable, then we should avoid reassigning.
 :::
-
-### Solution 2
-
-:::{solution} remove-1
-:label: Solution 2 to remove-1
-It should also work.
-
-```lisp
-(print '(1 2 2 3)
-```
-:::
