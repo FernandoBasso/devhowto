@@ -2,7 +2,7 @@
 description: This post follows up on the previous tutorial to set up a more real-life Docker envirlment with Node.js
 ---
 
-# Docker Node.js App for Local Development
+# Tutorial Docker Node.js App for Local Development 2
 
 ## Introduction
 

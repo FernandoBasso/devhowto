@@ -4,6 +4,9 @@ description: My notes, tips, ideas and example on creating, running and managing
 
 # Intro to Docker
 
+
+![Docker --help sample in cool-retro-term green](../__assets/docker-help-sample-in-cool-retro-term-green.png)
+
 ## Requirements for learning Docker
 
 To have a good grasping of working with Docker, it is essential that we have a solid understanding of Unix (most specifically Linux) operating system, command line tools and shells, networking and many other related topics.
