@@ -73,6 +73,7 @@ project:
         - file: docker/docker-hello-v2-tutorial.md
         - file: docker/docker-nodejs-v1-tutorial.md
         - file: docker/docker-nodejs-v2-tutorial.md
+        - file: docker/docker-common-gotchas.md
 
     - title: Emacs
       children:
