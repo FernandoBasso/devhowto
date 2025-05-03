@@ -77,6 +77,7 @@ project:
     - title: Emacs
       children:
         - file: emacs/emacs-intro.md
+        - file: emacs/emacs-tree-sitter.md
 
     - title: Go
       children:
