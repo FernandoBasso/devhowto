@@ -46,3 +46,7 @@ func main() {
 ```
 
 Check the [spec section on Constants](https://go.dev/ref/spec#Constant) for the precise details.
+
+We can rant a little bit and argument that _untyped integer_ is not a good name for the idea, as arguably, _integer_ in programming languages and type systems _does_ imply (or concretely means) a type.
+What the Go spec means about _untyped integer_ is more like a constraint, or a not-fully-realized integer type, or a loosely typed integer.
+That said, we know understand this topic a little more 😉.
