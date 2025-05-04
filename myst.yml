@@ -83,6 +83,7 @@ project:
     - title: Go
       children:
         - file: go/go-generics.md
+        - file: go/go-iota.md
         - file: go/go-pub-sub-examples.md
 
     - title: Lisp
