@@ -93,6 +93,7 @@ project:
 
     - title: Miscellaneous
       children:
+        - file: misc/unicode-and-utf-8.md
         - file: misc/newline.md
 
 site:
