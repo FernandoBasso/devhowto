@@ -1,16 +1,16 @@
 ---
-description: Notes, tips, examples and ideas on using the column command.
+description: Notes, tips, examples and ideas on using the column command line utility.
 ---
 
 # Column
 
 ## Intro
 
-The unix `column` command line utility columnate lists and csv-style data.
+The unix `column` command line utility columnates lists and csv-style data.
 
 Note that the `column` utility is not part of the [POSIX specification](https://pubs.opengroup.org/onlinepubs/9699919799/idx/utilities.html).
 Among other things, it means different systems will support a different feature set.
-And as always, GNU command line utilities offer a superior experience.
+And as always, GNU command line utilities offer a larger (and arguably better) set of features.
 
 ## Initial example
 
@@ -29,7 +29,7 @@ ID  NAME     EDITOR
 3   Vader    ed
 ```
 
-Or, if the fields are separated with some other character, like “,” (comma), then we say `-s,` to make `column` use “,” as the separator:
+Or, if the fields are separated with some other character, like “,” (comma), then we use `-s,` to make `column` use “,” as the separator:
 
 ```{code} bash
 $ cat <<EOF | column -ts,
