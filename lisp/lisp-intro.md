@@ -17,6 +17,7 @@ Well, Lisp teaches us to _want_ and _like_ many things, because there is little 
 ### Wiki, docs, tutorials, books
 
 - https://www.cliki.net/
+- https://lisp-lang.org/learn/getting-started/
 - https://lisp-docs.github.io/
 
 
