@@ -91,6 +91,7 @@ project:
     - title: Lisp
       children:
         - file: lisp/lisp-intro.md
+        - file: lisp/lisp-strings.md
         - file: lisp/lisp-exercises-1.md
 
     - title: Miscellaneous
