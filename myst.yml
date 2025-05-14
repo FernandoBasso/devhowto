@@ -94,6 +94,10 @@ project:
         - file: lisp/lisp-strings.md
         - file: lisp/lisp-exercises-1.md
 
+    - title: How To Design Programs
+      children:
+        - file: htdp/htdp-intro.md
+
     - title: Miscellaneous
       children:
         - file: misc/unicode-and-utf-8.md
