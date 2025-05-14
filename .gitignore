@@ -2,3 +2,8 @@
 # Output, built files from myst.
 #
 _build
+
+##
+# Node.js dependencies.
+#
+node_modules

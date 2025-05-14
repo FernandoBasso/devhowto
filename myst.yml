@@ -8,9 +8,13 @@ project:
   github: https://github.com/FernandoBasso/devhowto
   exclude:
     - __drafts/**
+  plugins:
+    - type: javascript
+      path: __plugins/listing.mjs
 
   toc:
     - file: README.md
+    - file: blog.md
 
     - title: Command Line
       children:
