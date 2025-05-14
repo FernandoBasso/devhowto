@@ -97,6 +97,7 @@ project:
     - title: How To Design Programs
       children:
         - file: htdp/htdp-intro.md
+        - file: htdp/racket-beginning-student-languages.md
 
     - title: Miscellaneous
       children:
