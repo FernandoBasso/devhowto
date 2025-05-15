@@ -93,6 +93,9 @@ project:
         - file: lisp/lisp-intro.md
         - file: lisp/lisp-strings.md
         - file: lisp/lisp-exercises-1.md
+        - title: Exercism Lisp Solutions
+          children:
+          - file: lisp/exercism/pal-picker.md
 
     - title: How To Design Programs
       children:
@@ -110,3 +113,4 @@ site:
     favicon: __assets/favicon.webp
     logo: __assets/site-logo.webp
     logo_text: Dev How To
+    folders: true
