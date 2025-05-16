@@ -174,7 +174,7 @@ In any case, depending on which symbol or emoji we have picked for our prompt, i
 
 ```{figure} ../__assets/aws-dev-prompt-Uf0160-unicode.png
 :alt: AWS prompt Nerd Font
-:label: aws-prompt-cloud-emoji
+:label: aws-prompt-nerd-font
 :align: center
 
 AWS prompt with Nerd Font
@@ -187,6 +187,18 @@ AWS prompt with Nerd Font
 
 AWS prompt with cloud emoji
 ```
+
+In the end, it will look like this:
+
+```{figure} ../__assets/bash-aws-vault-prompt.png
+:alt: AWS Vault prompt in Bash
+:label: aws-vault-prompt-in-bash
+:align: center
+
+AWS Vault prompt in Bash
+```
+
+Cool 😎, huh‽
 
 ## Conclusion
 
