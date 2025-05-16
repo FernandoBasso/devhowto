@@ -2,10 +2,20 @@
 description: My notes, tips, ideas and example on creating, running and managing docker containers.
 ---
 
+<!--
+This post is on the top level because it was published on LinkedIn
+before mystmd supported nested structures. And LinkedIn does not
+let us change the URL the post points to. If we nest this under
+./docker/, then the post on LinkedIn would lead to a 404 page
+on this site...
+
+https://www.linkedin.com/posts/fernandobasso_intro-to-docker-dev-how-to-activity-7324392287981957121-vgp5
+-->
+
 # Intro to Docker
 
 
-![Docker --help sample in cool-retro-term green](../__assets/docker-help-sample-in-cool-retro-term-green.png)
+![Docker --help sample in cool-retro-term green](__assets/docker-help-sample-in-cool-retro-term-green.png)
 
 ## Requirements for learning Docker
 
