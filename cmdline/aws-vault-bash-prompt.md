@@ -1,5 +1,6 @@
 ---
 description: This articles shows how we can have AWS Vault prompt information on bash with some custom-made setup.
+thumbnail: ../__assets/bash-aws-vault-prompt.png
 ---
 
 # AWS Vault Bash Prompt
@@ -8,34 +9,35 @@ description: This articles shows how we can have AWS Vault prompt information on
 
 The onboarding documentation for one of the projects I joined some time ago suggested the following setup:
 
-1. Install oh-my-zsh.
-2. Add the alias alias `av='aws-vault exec --debug --duration=1h'` to zsh's config files.
+1. Use ZSH as the default shell.
+2. Install oh-my-zsh which comes with many useful plugins, including displaying the current active AWS Vault profile in use.
+3. Add the alias alias `av='aws-vault exec --debug --duration=1h'` to zsh's config files so can simply type `av stage` or `av prod` to login.
 
 It works really well (zsh is amazing for interactive use, no denying that) and it shows the current active AWS profile in use for that shell session.
-In this screenshot, I’m using the Spaceship theme with the lambda symbol “λ” (followed by a space) as the prompt character:
+In this screenshot, I’m using the [Spaceship ZSH prompt](https://spaceship-prompt.sh/) with the lambda symbol “λ” (followed by a space) as the prompt character:
 
 ![zsh-aws-aws-vault-stage-prod](../__assets/zsh-aws-vault-stage-prod.png)
 
 Yet, I still prefer to use Bash as my shell most of the time (and because it is the shell we use for almost 100% of shell scripts anyway).
 
-Since my first steps in Unix-like systems (mostly Linux for me) I was always infatuated with the idea of crafting bash prompts that would suit particular needs in different projects and situations.
-Maybe I’m working with Node.js, Ruby, Go, etc.
+Since my first steps in Unix-like systems (mostly Linux for me) I have always been infatuated with the idea of crafting bash prompts that would suit particular needs in different projects and situations.
+Maybe I’m working with Node.js, Ruby, Go, etc., and I want the prompt to show useful information depending on what I am doing at the moment.
 Check it out:
 
 ![My custom bash prompts for different languages and situations](../__assets/my-custom-bash-prompts-for-different-languages.png)
 
 My prompt also shows a lot of Git information (new files, changed files, push/pull status, etc.), among other things I’m not covering or explaining in this post.
 
-Anyway, how can we have Bash’s prompt to display aws-vault information?
+Anyway, how can we have Bash’s prompt to display aws-vault profile information?
 
 ## Adding aws-vault profile info to bash’s prompt
 
-It so happens that when we authenticate to one of the configured AWS Vault profiles, aws-vault fills in some environment variables for the child subshell
+It so happens that when we authenticate to one of the configured AWS Vault profiles, aws-vault fills in some environment variables for the subshell
 that gets created, as described in their readme:
 
 - [99designs/aws-vault README](https://github.com/99designs/aws-vault/blob/master/README.md#how-it-works).
 
-For our purposes, we can make use of `AWS_VAULT` environment variable!
+For our purpose, we can make use of `AWS_VAULT` environment variable!
 It works like this: if we log into the “dev” profile, that variable will contain the value “dev”.
 Log into a profile like “stage” , and it will now contain the value “stage”, and so on and so forth for any other profiles.
 
@@ -55,7 +57,8 @@ stage
 :::
 
 :::{tip}
-You might have your own bash setup with `.bashrc`, `.bash_profile` and maybe some other bash related files that are sourced from one or both of those two main files. That said, to get started with the next examples, adding the code to either `~/.bashrc` or `~/.bash_profile` should be fine.
+You might have your own bash setup with `~/.bashrc`, `~/.bash_profile` and maybe some other bash related files that are sourced from one or both of those two main files.
+That said, to get started with the next examples, adding the code to either `~/.bashrc` or `~/.bash_profile` should be fine.
 :::
 
 With that knowledge in mind, we can write a bash function similar to this one:
@@ -63,7 +66,7 @@ With that knowledge in mind, we can write a bash function similar to this one:
 :::{code} bash
 :caption: Bash function to display AWS Vault profile information
 ##
-# Get aws-vault active profile session information.
+# Display aws-vault active profile session information.
 #
 # aws cli/vault sets the env var AWS_VAULT for the currently active
 # profile session. Therefore, we just verify it is set with a
@@ -94,7 +97,7 @@ $ PS1="\n\$(aws_vault_profile_info)\n𝝺 "
 Or write a shell function that can be later called without having to memorize any of the bash’s prompt syntax:
 
 :::{code} bash
-ps1aws () {
+function ps1aws () {
     PS1="\n\$(aws_vault_profile_info)\n𝝺 "
 }
 :::
@@ -107,7 +110,7 @@ Of course you can have your bash's PS1 prompt _always_ already include that func
 
 ## Adding an icon ☁️
 
-If text-only is too dull for you, it is possible can add an icon to the prompt as well.
+If text-only is too dull for you, it is possible to include an icon to the prompt as well.
 Simply pick an icon from your favorite emoji picker, or use an hex escape sequence:
 
 <!--
@@ -128,7 +131,7 @@ $ printf '\Uf0160\n'
 ![bash unicode symbol cloud](../__assets/bash-print-unicode-symbol-cloud.png)
 
 :::{tip}
-You can install one or more Nerd Fonts and then look up the hex codes for the symbols you prefer in their website:
+We can install one or more Nerd Fonts and then look up the hex codes for the symbols you prefer in their website:
 
 - [Nerd Fonts cheat-sheet](https://www.nerdfonts.com/cheat-sheet)
 
@@ -170,7 +173,7 @@ This is the [Smile emoji picker](https://github.com/mijorus/smile), on Arch Linu
 ![Smile emoji picker on Arch Linux 2025-05-16](../__assets/smile-emoji-picker-on-arch-linux-2025-05-16.png)
 :::
 
-In any case, depending on which symbol or emoji we have picked for our prompt, it could look like this:
+In any case, depending on which symbol or emoji we have chosen to include in our prompt, it could look like this:
 
 ```{figure} ../__assets/aws-dev-prompt-Uf0160-unicode.png
 :alt: AWS prompt Nerd Font
@@ -187,6 +190,9 @@ AWS prompt with Nerd Font
 
 AWS prompt with cloud emoji
 ```
+
+Therefore, after the function is created, we can simply invoke it in the shell  and from that moment on, any time we log into some AWS profile, the information will be displayed.
+And of course, it could be made permanent by adding it one of our bash config files.
 
 In the end, it will look like this:
 
