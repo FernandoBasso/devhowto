@@ -4,7 +4,8 @@ project:
   title: Dev How To
   description: My notes, tips, examples and insights on software development in general.
   keywords: [unix, cmdline, shell, bash, programming, devops]
-  authors: [Fernando Basso]
+  authors:
+    - "Fernando Basso"
   github: https://github.com/FernandoBasso/devhowto
   exclude:
     - __drafts/**

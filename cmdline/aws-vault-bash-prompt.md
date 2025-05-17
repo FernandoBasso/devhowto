@@ -3,7 +3,7 @@ description: This articles shows how we can have AWS Vault prompt information on
 thumbnail: ../__assets/bash-aws-vault-prompt.png
 date: 2025-05-17
 authors:
-  - name: Fernando Basso
+  - name: "Fernando Basso"
 ---
 
 # AWS Vault Bash Prompt
