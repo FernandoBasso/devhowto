@@ -104,6 +104,26 @@ project:
         - file: htdp/htdp-intro.md
         - file: htdp/racket-beginning-student-languages.md
 
+    - title: HackerRank
+      children:
+      - title: Problem Solving (Algorithms)
+        children:
+          - file: hackerrank/problem-solving/intro.md
+          - file: hackerrank/problem-solving/easy/birthday-cake-candles.md
+          - file: hackerrank/problem-solving/easy/camelcase.md
+          - file: hackerrank/problem-solving/easy/compare-triplets.md
+          - file: hackerrank/problem-solving/easy/diagonal-difference.md
+          - file: hackerrank/problem-solving/easy/grading-students.md
+          - file: hackerrank/problem-solving/easy/ice-cream-parlor.md
+          - file: hackerrank/problem-solving/easy/mini-max-sum.md
+          - file: hackerrank/problem-solving/easy/missing-numbers.md
+          - file: hackerrank/problem-solving/easy/plus-minus.md
+          - file: hackerrank/problem-solving/easy/sherlock-array.md
+          - file: hackerrank/problem-solving/easy/staircase.md
+          - file: hackerrank/problem-solving/easy/strong-password.md
+          - file: hackerrank/problem-solving/easy/time-conversion.md
+          - file: hackerrank/problem-solving/easy/very-big-sum.md
+
     - title: Miscellaneous
       children:
         - file: misc/unicode-and-utf-8.md
