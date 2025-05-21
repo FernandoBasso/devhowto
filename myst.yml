@@ -98,6 +98,7 @@ project:
         - title: Exercism Lisp Solutions
           children:
           - file: lisp/exercism/pal-picker.md
+          - file: lisp/exercism/grains.md
 
     - title: How To Design Programs
       children:
