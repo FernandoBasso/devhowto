@@ -55,7 +55,7 @@ $O(1)$, as we simply use one or two integer accumulators to hold the values we n
     (run 1 1 1)))
 ```
 
-## Prelude to v2 with base 2 powers
+## v2 with base 2 powers
 
 Did you notice that the number of grains on the board squares are 1, 2, 4, 8, 16, 32..., are all powers of 2?
 
@@ -100,13 +100,11 @@ Therefore, we can implement a solution like this for `total` (for a board of 5 s
   (- (expt 2 5) 1))
 ```
 
-## v2 optmized solution
-
 Finally and from the explanations above, we can have the full solution for the challenge.
 
 ### Time complexity
 
-$O(1) since we don't loop any longer and perform the whole computation with a couple of math operations.
+$O(1)$ since we don't loop any longer and perform the whole computation with a couple of math operations.
 
 ### Space complexity
 
