@@ -108,7 +108,7 @@ $O(1)$ since we don't loop any longer and perform the whole computation with a c
 
 ### Space complexity
 
-$O(1)$ since we simply return the result the computation without requireing any temporary memory space.
+$O(1)$ since we simply return the result of the computation without requireing any temporary memory space.
 
 ```{code} lisp
 (defparameter *board-size* 64)
