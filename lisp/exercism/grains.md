@@ -55,7 +55,7 @@ $O(1)$, as we simply use one or two integer accumulators to hold the values we n
     (run 1 1 1)))
 ```
 
-## v2 with base 2 powers
+## Prelude to v2 with base 2 powers
 
 Did you notice that the number of grains on the board squares are 1, 2, 4, 8, 16, 32..., are all powers of 2?
 
