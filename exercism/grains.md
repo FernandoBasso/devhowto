@@ -63,7 +63,7 @@ Did you notice that the number of grains on the board squares are 1, 2, 4, 8, 16
 
 Let's consider a board of 5 squares:
 
-![Board of five suares](../../__assets/grains-board-of-5-squares.png)
+![Board of five suares](../__assets/grains-board-of-5-squares.png)
 
 The blue indexes are the square number.
 Notice how how if we use 2 as the base, and raise that base to each of the boards's square number minus 1, we get the number of grains on that specific square?

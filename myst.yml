@@ -99,15 +99,18 @@ project:
         - file: lisp/lisp-intro.md
         - file: lisp/lisp-strings.md
         - file: lisp/lisp-exercises-1.md
-        - title: Exercism Lisp Solutions
-          children:
-          - file: exercism/pal-picker.md
-          - file: exercism/grains.md
 
     - title: How To Design Programs
       children:
         - file: htdp/htdp-intro.md
         - file: htdp/racket-beginning-student-languages.md
+
+    - title: Exercism
+      children:
+        - file: exercism/hello.md
+        - file: exercism/lucians-luscious-lasagna.md
+        - file: exercism/pal-picker.md
+        - file: exercism/grains.md
 
     - title: HackerRank
       children:
