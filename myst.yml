@@ -90,6 +90,10 @@ project:
         - file: go/go-iota.md
         - file: go/go-pub-sub-examples.md
 
+    - title: Clojure
+      children:
+        - file: closure/intro.md
+
     - title: Lisp
       children:
         - file: lisp/lisp-intro.md
