@@ -6,7 +6,9 @@ description: Pal Picker Exercism Lisp exercise notes and solutions.
 
 - [Pal Picker Lisp Exercise](https://exercism.org/tracks/common-lisp/exercises/pal-picker)
 
-## Solution
+## Common Lisp
+
+### Solution
 
 ```lisp
 ;;;;
