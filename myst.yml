@@ -110,6 +110,7 @@ project:
         - file: exercism/hello.md
         - file: exercism/lucians-luscious-lasagna.md
         - file: exercism/pal-picker.md
+        - file: exercism/bird-watcher.md
         - file: exercism/grains.md
 
     - title: HackerRank
