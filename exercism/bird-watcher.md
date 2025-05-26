@@ -56,9 +56,20 @@ description: Exercism Bird Watcher Clojure notes and solutions.
   Returns true if the odd pattern of 1's and 0's occur for the entire week."
   (cond
     (= (count birds) 1) true
-    (= (every? #(or (= % 0) (= % 1)) [(first birds) (second birds)]) false)
-      false
-    (not= (first birds) (second birds))
-      (odd-week? (rest birds))
+    (false? (every? #(or (= % 0) (= % 1)) (take 2 birds))) false
+    (not= (first birds) (second birds)) (odd-week? (rest birds))
     :else false))
 ```
+
+#### odd week?
+
+An odd week is one where we have alternating 1's and 0 counts.
+
+This solution recurses through the input vector and checks whether the first and second elements are indeed only 1 and 0, and also that the first element is not equal to the second element (that is, if the first element is 0, the other must be 1 and vice-versa).
+
+If those two conditions are satisfied, recurse again with the rest of the vector.
+
+At some point, and if the two conditions have always been satisfied, there will be a a single remaining element on the vector.
+This is the base case where we return `true`.
+
+All other cases mean some condition was not not satisfied so we return `false`.
