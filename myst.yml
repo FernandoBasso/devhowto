@@ -107,6 +107,7 @@ project:
 
     - title: Exercism
       children:
+        - file: exercism/intro.md
         - file: exercism/hello.md
         - file: exercism/lucians-luscious-lasagna.md
         - file: exercism/pal-picker.md
