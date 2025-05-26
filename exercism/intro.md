@@ -15,5 +15,5 @@ Maybe a solution will be more FPish and declarative, while another solution coul
 
 Maybe we'll try to make the code more elegant, or more performant.
 
-Of course, sometimes the elegant solution is the more performant one, sometimes not.
+Of course, sometimes the elegant solution is _also_ the more performant one (and sometimes not).
 It depends a lot on the problem at hand and the language being used.
