@@ -92,7 +92,8 @@ project:
 
     - title: Clojure
       children:
-        - file: closure/intro.md
+        - file: clojure/intro.md
+        - file: clojure/collections.md
 
     - title: Lisp
       children:
