@@ -39,6 +39,10 @@ project:
         - file: cmdline/hackerrank-shell.md
         - file: cmdline/clipboard-on-the-command-line.md
 
+    - title: Data Structures & Algorithms
+      children:
+        - file: dsa/server-load-distribution.md
+
     - title: Git
       children:
         - file: git/commit-messages.md
